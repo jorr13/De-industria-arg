@@ -10,6 +10,7 @@ html,body {
 }
 .circulo-blanco{
     display: flex;
+    align-items: center;
     justify-content: flex-start;
     position: absolute;
     max-width: none;
@@ -18,10 +19,10 @@ html,body {
     height: 500px;
     border-radius: 50%;
     background: white;
-    top: 50%;
-    left: 8%;
-    transform: translate(122%,-50%);
     z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
 }
 
 .banner{
@@ -82,7 +83,7 @@ html,body {
     font-weight: 600;
     color: white;
 }
-#menu-item-71, #menu-item-72{
+#menu-item-71, #menu-item-135, #menu-item-134{
     display: none;
 }
 .boton-menu{
@@ -981,7 +982,7 @@ footer .ico-contenedor-redes{
 
 .parte-ventajas{
     text-align: justify;
-    padding-left: 25vh;
+    padding-left: 16vh;
     background-color: white;
     
 }
@@ -1097,7 +1098,7 @@ footer .ico-contenedor-redes{
 }
 .shop .price{
     text-align: center;
-    margin-top: 12px;
+    margin-top: 3px;
     font-weight: 700 !important;
     text-transform: uppercase;
     color: #21BCD0 !important;
@@ -1113,7 +1114,7 @@ footer .ico-contenedor-redes{
 .verproductoshop {
     align-items: center;
     background-color: #E9E649 !important;
-    bottom: 13px;
+    bottom: 40px;
     margin: 0 auto;
     color: #21BCD0 !important;
     display: flex;
@@ -1157,15 +1158,37 @@ display: none;
 .single-product-data  .wc-tabs{
     display: none;
 }
-/*#tab-description {
+#tab-description {
     margin-left: 52%;
+    display: block;
+    position: absolute;
+    top: 20%;
 }
 .product-template-default .woocommerce-tabs, .wc-tabs-wrapper {
     clear: none!important;
-}*/
+    height: 80px;
+}
+.related ul{
+    padding-bottom: 4% !important;
+}
+.related h2{
+    color: #21BCD0;
+    text-transform: uppercase;
+    font-weight: 700 !important;
+    text-align: center;
+    padding-bottom: 4%;
+}
+.summary{
+    margin-top: 26px;
+}
 .single-product-data .related{
-    margin-top: 23%;
+    margin-top: 80vh;
 } 
+#tab-description h2{
+    color: #21bcd0;
+
+    text-transform: uppercase;
+}
 .single-product-data .products ul li {
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
 }
@@ -1181,7 +1204,7 @@ display: none;
 }
 .single-product-data .products ul li .price{
     text-align: center;
-    margin-top: 12px;
+    margin-top: 3px;
     font-weight: 700 !important;
     text-transform: uppercase;
     color: #21BCD0 !important;
@@ -1199,6 +1222,9 @@ display: none;
 }
 .in-stock{
     color: #21BCD0 !important;
+}
+.woocommerce div.product p.price ins, .woocommerce div.product span.price ins{
+    text-decoration: none;
 }
 /*FIN DE LA TIENDA-----------------------*/
 
@@ -1231,6 +1257,7 @@ display: none;
         font-size: 10px;
     }
 
+
     .boton-ventaja a {
         font-size: 14px;
     }
@@ -1259,7 +1286,7 @@ display: none;
         height: 39vh;
         width: 39vh;
     }
-    .sliderimagen{
+    .sliderimagen, .circulo-blanco{
         transform: translate(-6%, -50%);  
     }
     .circulo-azul{
@@ -1274,6 +1301,11 @@ display: none;
 }
 
 @media only screen and (max-width: 1160px) {
+    .contenedor-title-nosotros{
+        width: 120vh;
+        height: 120vh;
+        transform: translate(0%,-27%);
+    }
     .slider .caption span {
         padding-top: 10%;
     }
@@ -1295,7 +1327,7 @@ display: none;
         height: 500px;
     }
 
-    .sliderimagen {
+    .sliderimagen, .circulo-blanco {
         transform: translate(-12%, -50%);
         width: 430px;
         height: 430px;
@@ -1354,5 +1386,95 @@ display: none;
     }
 
 }
+@media only screen and (max-width: 1152px) {
+    .nosotros .imgseccion {
+        width: 138px !important;
+        height: 140px !important;
+        padding-left: 10% !important;
+        padding-top: 12% !important;
+    }
+    .imgseccion img {
+        width: 100% !important;
+    }
+    .nosotros .contenido-ventajas{
+        margin-top: 10%;
+    }
+}
 
+
+@media only screen and (max-width: 1024px) {
+    .contenedor-titulo-nosotros{
+        height: 360px;
+    }
+    .contenedor-title-nosotros{
+        width: 110vh;
+        height: 110vh;
+        border: 70px solid rgba(33, 188, 208, 0.6);
+    }
+    .contenedor-title-nosotros h2 {
+        font-size: 52px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .contenedor-title-nosotros{
+        width: 95vh;
+            height: 95vh;
+            border: 60px solid rgba(33, 188, 208, 0.6);
+        }
+    .contenedor-titulo-nosotros {
+        height: 320px;
+    }
+        
+    .contenedor-title-nosotros h2 {
+        font-size: 45px;
+    }
+    .contenedor-texto-parte-uno {
+        width: 80%;
+        padding-left: 0;
+        margin: 0 auto;
+    }
+    .parte-ventajas {
+        padding-left: 12vh;
+    }
+    .tercera-parte-nosotros p {
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 460px) {
+    .contenedor-titulo-nosotros {
+        height: 300px;
+        }
+    .contenedor-title-nosotros h2 {
+        font-size: 35px;
+    }
+    .contenedor-title-nosotros {
+        width: 75vh;
+        height: 75vh;
+        transform: translate(0%,-16%);
+    }
+    .contenedor-texto-parte-uno {
+    width: 80%;
+    padding-left: 0;
+    margin: 0 auto;
+    }
+    .parte-ventajas {
+        padding-left: 12vh;
+    }
+    .tercera-parte-nosotros p {
+        width: 80%;
+    }
+}
 /*Fin de responsive*/
+
+
+/*estilos para salir del paso*/
+
+h2.woocommerce-loop-product__title {
+    color: white;
+    font-weight: 600;
+}
+
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+    height: 451px;
+}
+

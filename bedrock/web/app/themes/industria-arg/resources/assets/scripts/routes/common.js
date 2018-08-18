@@ -79,6 +79,9 @@ export default {
           $('.slider li:nth-child('+ imgPos +')').fadeIn(); // Mostramos el Slide seleccionado
         }
       });
+      $(".menu-item-132 > a").click(function(){
+        $("html, body").animate({ scrollTop: $(document).height()}, 1500);
+      });
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired

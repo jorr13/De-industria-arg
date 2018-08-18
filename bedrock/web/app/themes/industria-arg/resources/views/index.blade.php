@@ -10,6 +10,7 @@
 			<span>Productos recientes</span>
     </div>
     <div class="circulo-azul"></div>
+    <div class="circulo-blanco"></div>
 
 		<ul class="slider">
       @foreach(array_slice($products_loop,0,4) as $products)
@@ -40,7 +41,6 @@
         <span class="fa fa-chevron-left"><img src="/app/uploads/2018/08/flecha-bajar.png" alt=""></span>
       </div>
     </div>
-    <div class="circulo-blanco"></div>
 	</div>
   <!--fin del slider-->
   @if(have_rows('seccion_arriba', 30))
