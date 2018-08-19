@@ -185,7 +185,7 @@ footer .ico-contenedor-redes{
     background: #21bcd0;
     opacity: 0.6;
     border-radius: 0% 600px 600px 0%;
-    transform: translateY(-12.5%);
+    transform: translateY(-15.5%);
 }
 .contenamarillo{
     position:absolute;
@@ -206,7 +206,7 @@ footer .ico-contenedor-redes{
     width: 36%;
     position: absolute;
     margin-top: 11%;
-    margin-left: 10%;
+    margin-left: 9%;
 }
 .primercolor{
     margin-top: 4%;
@@ -214,13 +214,14 @@ footer .ico-contenedor-redes{
     overflow: hidden;
     height: 425px;
     background-color: #21BCD0;
+    position: relative;
 }
 .segundocolor{
-    width:80% !important;
-    height: 233%;
-    transform: translateY(-27.5%);
+    width: 175vh;
+    height: 175vh;
+    transform: translateY(-29.5%);
     border: 68px solid #4CC7D6;
-    border-radius: 791px;
+    border-radius: 360%;
     background-color: white;
     margin: 0 auto;
 }
@@ -264,13 +265,14 @@ footer .ico-contenedor-redes{
     color: #22BACF;
 }
 .contenedor-contenido{
-    margin-top: 16%;
+    margin-top: 22%;
     padding: 95px;
     height: 0px;
     width: 94%;
     margin-left: 3%;
 }
 .contenedor-empresas-confian{
+    position: relative;
     margin-top: 5%;
     text-align: center;
 }
@@ -295,6 +297,9 @@ footer .ico-contenedor-redes{
     margin-top: 5%;
     background-color: #EBE81D;
     text-align: center;
+    margin-left: 0; 
+    margin-right: 0; 
+
 }
 .title-ventajas {
     width: 100%;
@@ -798,12 +803,13 @@ footer .ico-contenedor-redes{
 }
 .contenedor-tarjetas-padre{
     position: absolute;
-    margin-top: 12%;
-    width: 100%;
+    margin-top: 14.3%;
+    width: 100%;    
+    justify-content: center;
 }
 .contenedor-tarjetas{
     display: inline-block;
-    margin: 1%;
+    margin: 1.2%;
 }
 
 .boton-categoria-ir-tienda{
@@ -832,10 +838,10 @@ footer .ico-contenedor-redes{
 }
 .contenedor-categoria{
     position: relative;
-    height: 840px;
+    height: 130vh;
 }
 .contenedor-padre-producto-categoria{
-    position: relative;
+    position: a;
     padding-bottom: 5%;
     text-align: center;
     justify-content: center;
@@ -1292,9 +1298,6 @@ display: none;
     .circulo-azul{
         transform: translatey(-50%) translatex(-89px);
     }
-    .segundocolor {
-        height: 218%;
-    }
     .contenido-ventajas {
         margin-top: -5%;
     }
@@ -1414,6 +1417,30 @@ display: none;
     .contenedor-title-nosotros h2 {
         font-size: 52px;
     }
+    .segundocolor{
+        transform: translateY(-23.5%);
+        width: 140vh;
+        height: 140vh;
+    }
+    .contenedor-contenido {
+        margin-top: 16%;
+    }
+    .boton-producto-categoria{
+        width: 70%;
+        font-size: 10px;
+    }
+    .producto-precio{
+        font-size: 12px;
+    }
+    .contenedor-tarjetas-padre{
+        margin-top: 16.4%;
+    }
+    .boton-categoria-ir-tienda{
+        top: 85%;
+    }
+    .imgseccion{
+        width:82px
+    }
 }
 @media only screen and (max-width: 768px) {
     .contenedor-title-nosotros{
@@ -1438,6 +1465,93 @@ display: none;
     }
     .tercera-parte-nosotros p {
         width: 80%;
+    }
+    .primera_parte{
+        margin-top: 15%;  
+    }
+    .slider .caption{
+        width: 30%;
+        margin-top: 18%;
+        left: 0%;
+    }
+    .slider .caption h2{
+        font-size: 25px !important;
+    }
+    .slider .caption p{
+        font-size: 15px;
+    }
+    .boton-slider{
+        width: 86%;
+        font-size: 11px;
+    }
+    .sliderimagen, .circulo-blanco{
+        width: 340px;
+        height: 340px;
+        transform: translate(-14%, -50%);
+    }
+    .slideshow{
+        margin-top: 26%;
+    }
+    .padre-botones-slider::before {
+        width: 420px;
+        height: 420px;
+    }
+    .padre-botones-slider::after {
+        width: 320px;
+        height: 320px;
+    }
+    .right, .left {
+        width: 30px;
+        height: 30px;
+    }
+    .circulo-azul {
+        width: 420px;
+        height: 420px;
+    }
+    .slider-item-numeros a{
+        font-size: 16px;
+    }
+    .contenedor-parrafo {
+        margin-top: -71%;
+    }
+    .contenido {
+        font-size: 18px;
+    }
+    .contendos{
+        width: 60%
+    }
+    .contenedor-tarjetas-padre{
+        margin-top: 5.4%;
+    }
+    .primercolor{
+        height: 390px;
+    }
+    .segundocolor {
+        transform: translateY(-20.5%);
+        width: 115vh;
+        height: 115vh;
+        border: 60px solid #4CC7D6;
+
+    }
+    .contenido-tercer-color {
+        font-size: 16px;
+    }
+    .contenedor-contenido {
+        margin-top: 6%;
+    }
+    .segundocolor h2{
+        margin-top: 0px;
+    }
+    .caja-texto-suscribete{
+        width: 75%;
+        margin-left: 13%;
+
+    }
+    .ico-redes {
+        max-width: 6%;
+    }
+    .contenedor-titulo-empresas-confian{
+        width: 70%;
     }
 }
 @media only screen and (max-width: 460px) {

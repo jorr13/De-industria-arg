@@ -183,7 +183,7 @@
 
   <!--lo nuevo del producto-->
   <div class="primercolor columns is-multiline is-12">
-    <div class="segundocolor column is-6">
+    <div class="segundocolor otraclase">
       <div class="contenedor-contenido">
         <p class="contenido-tercer-color">se el primero  en recibir nuestras ofertas y promociones</p>
       </div>
@@ -210,13 +210,13 @@
         @if(have_rows('empresas_que_confian', 49))
         {{-- loop through the rows of data --}}
         @while (have_rows('empresas_que_confian', 49))@php(the_row())
-          <a href="{{ get_sub_field('dominio_img') }} "class="column is-3 ">
-            <div class="img-categoria ">
+          <div class="img-categoria column is-3 ">
+            <a href="{{ get_sub_field('dominio_img') }}">
               <div class="contenedorimg-confian">
                 <img src="{{ get_sub_field('img_empresa') }}" alt="">
               </div>
-            </div>
-          </a>
+            </a>
+          </div>
         @endwhile 
         @else      
         @endif
