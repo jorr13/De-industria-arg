@@ -226,9 +226,9 @@
 
   <!--ventajas--> 
 <div class="ventajascontenedor columns is-multiline is-12">
-
+  <div class="contenedor-titulo-de-circulo">
     <span class="title-ventajas">Ventajas de comerciar con nosotros</span>
-
+  </div>
     @if(have_rows('ventajas_de_comerciar', 54))
     {{-- loop through the rows of data --}}
     @while (have_rows('ventajas_de_comerciar', 54))@php(the_row())
