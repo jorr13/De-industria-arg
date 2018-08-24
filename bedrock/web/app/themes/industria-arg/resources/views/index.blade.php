@@ -184,10 +184,8 @@
   <!--lo nuevo del producto-->
   <div class="primercolor columns is-multiline is-12">
     <div class="segundocolor otraclase">
-      <div class="contenedor-contenido">
         <p class="contenido-tercer-color">se el primero  en recibir nuestras ofertas y promociones</p>
-      </div>
-        <h2>¡Suscribete!</h2> 
+        <h2>¡Suscribete!</h2>
         <div class="contenedorcaja-input">       
           <input type="text" placeholder="Escribe tu correo electronico aqui" class="caja-texto-suscribete">
         </div>
