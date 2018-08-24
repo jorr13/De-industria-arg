@@ -1,20 +1,14 @@
 export default {
   init() {
     // JavaScript to be fired on all pages
-    $(document).ready(function(){
-      $("#boton-desplegar").click(function(){
-          $(".nav-primary").css("display", "none"),
-          $(".boton-cerrar").css("display", "block"),
+ 
+      $("#boton-desplegar, #boton-ocultar").click(function(e) { 
+        e.preventDefault();
+          $(".nav-primary").fadeToggle(),
+          $(".boton-cerrar").fadeToggle(),
           $(".segundo-menu").slideToggle();
       });
-    });
-    $(document).ready(function(){
-      $("#boton-ocultar").click(function(){
-          $(".segundo-menu").slideToggle(),
-          $(".boton-cerrar").css("display", "none"),
-          $(".nav-primary").css("display", "block");
-      });
-    });
+
     //llamada de modal mayorista
     $(".menu-item-162").click(function (e) { 
       e.preventDefault();
@@ -27,13 +21,21 @@ export default {
       $("#mayorista").fadeOut();
     });
     //agregando boton en woocommerce para llamar a la modal
+    $(document).ready(function(){
+      var addId = $(".woocommerce-loop-product__title");
+      addId.each(function(index, element){
+      $(element).attr("id", "id-" + (index + 1));
+      });
+    });
+
+
     $("li.status-publish").append("<a href='#' class='boton-consultar-precio'>Consultar precio</a>");
     //llamada de modal mayorista
     $(".boton-consultar-precio").click(function (e) { 
     e.preventDefault();
-    //var email = $(this).data('email');
+    var titulo =  $(this).siblings(".woocommerce-LoopProduct-link").children(".woocommerce-loop-product__title").text();
     $(" #consultar-precio").fadeIn();
-    //$("#registrar-usuario #email-receptor").val(email);
+    $("#consultar-precio #titulo-producto").val(titulo);
     });
     $("#cerrar, .modal-background").click(function (e) { 
     e.preventDefault();

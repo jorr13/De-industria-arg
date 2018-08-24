@@ -1,7 +1,7 @@
 <header class="banner">
   <div class="primer-menu">
     <a class="brand" href="{{ home_url('/') }}"><img class="imgmenu" src="{{ home_url('app/uploads/2018/08/DIA-logo-02.png') }} " alt=""></a>
-    <a href="#" id="boton-ocultar" class="boton-cerrar">X</a>
+    <a href="#" id="boton-ocultar" class="boton-cerrar"><img class="boton-menu" src="{{ home_url('app/uploads/2018/08/close.png') }}" alt=""></a>
     <nav class="nav-primary">
       @if (has_nav_menu('primary_navigation'))
         {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}
@@ -9,7 +9,7 @@
       <a href="#" id="boton-desplegar"><img class="boton-menu" src="{{ home_url('app/uploads/2018/08/hamburguesa1.png') }}" alt=""></a>
     </nav>
   </div>
-  
+   
 
   <div class="segundo-menu otro-menu">
     <nav class="nav-segundo">
@@ -81,7 +81,7 @@
                     <section class="modal-card-body contenedor-input">
                         <input placeholder="Nombre y Apellido" id="nombre" type="text">
                         <input placeholder="Correo electronico" id="emailcliente" type="text">
-                        <input placeholder="Tema" id="tema" type="text" >
+                        <input placeholder="Tema" id="titulo-producto" type="text" >
                         <textarea  id="mensaje" placeholder="Su mensaje"></textarea>
                     </section>
                     <footer class="modal-card-foot">
