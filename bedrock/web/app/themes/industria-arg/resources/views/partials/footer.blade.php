@@ -15,11 +15,11 @@
       <div class="segunda-seccion column is-3">
         <span class="title-contacto">contactanos</span>
         <ul class="ico-footer-redes">
-          <li class="ico-contenedor-redes"><img class="ico-redes-blanco" src="app/uploads/2018/08/icon-facebook-blanco.png" alt=""></li>
-          <li class="ico-contenedor-redes"><img class="ico-redes-blanco" src="app/uploads/2018/08/icon-instagram-blanco.png" alt=""></li>
-          <li class="ico-contenedor-redes"><img class="ico-redes-blanco" src="app/uploads/2018/08/icon-linkedin-blanco.png" alt=""></li>
-          <li class="ico-contenedor-redes"><img class="ico-redes-blanco" src="app/uploads/2018/08/icon-twitter-blanco.png" alt=""></li>
-          <li class="ico-contenedor-redes"><img class="ico-redes-blanco" src="app/uploads/2018/08/icon-youtube-blanco.png" alt=""></li>
+          <li class="ico-contenedor-redes"><img class="ico-redes-blanco" src="{{ home_url('/app/uploads/2018/08/icon-facebook-blanco.png') }}" alt=""></li>
+          <li class="ico-contenedor-redes"><img class="ico-redes-blanco" src="{{ home_url('/app/uploads/2018/08/icon-instagram-blanco.png') }}" alt=""></li>
+          <li class="ico-contenedor-redes"><img class="ico-redes-blanco" src="{{ home_url('app/uploads/2018/08/icon-linkedin-blanco.png') }}" alt=""></li>
+          <li class="ico-contenedor-redes"><img class="ico-redes-blanco" src="{{ home_url('app/uploads/2018/08/icon-twitter-blanco.png') }}"alt=""></li>
+          <li class="ico-contenedor-redes"><img class="ico-redes-blanco" src="{{ home_url('app/uploads/2018/08/icon-youtube-blanco.png') }}"alt=""></li>
         </ul>
         <div class="derechos-reservados">
           <h4>copyright . 2018 deindustriaargentina.com all rights reserved</h4>

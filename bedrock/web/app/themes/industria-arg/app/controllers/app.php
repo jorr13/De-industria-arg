@@ -77,6 +77,29 @@ function electrodomesticoLoop()
         ];
     }, $electrodomestico);
 }
+//construccion
+
+function construccionLoop()
+{
+    $construccion = get_posts([
+        'post_type' => 'product',
+        'product_cat' => 'construccion',
+    ]);
+
+    return array_map(function ($post) {
+        return [  
+            'price' => get_post_meta( $post->ID, '_regular_price', true),
+            'sellprice' => get_post_meta( $post->ID, '_regular_price', true),
+            'thumbnail' => get_the_post_thumbnail($post->ID, 'large'),
+            'title' => get_the_title($post->ID),
+            'excerpt' => apply_filters( 'the_excerpt', get_the_excerpt($post->ID) ),
+            'link' => get_permalink($post->ID),
+            'categories' => wp_list_pluck( get_the_category($post->ID),'name'),
+            'content' => apply_filters( 'the_content', get_the_content($post->ID) ),
+            'tags' => get_tags($post->ID)    
+        ];
+    }, $construccion);
+}
 //categorias
 
 

@@ -9,7 +9,10 @@
 		<div class="tituloslider">
 			<span>Productos recientes</span>
     </div>
-    <div class="circulo-azul"></div>
+    <div class="circulo-azul">
+      <div class="circulo-blanco">
+      </div>
+    </div>
 		<ul class="slider">
       @foreach(array_slice($products_loop,0,4) as $products)
         <li>
@@ -59,7 +62,7 @@
   @endif
 <!--Categorias-->
 
-<div class="categorias-contenedor-padre columns is-multiline is-12">
+<div class="categorias-contenedor-padre columns is-multiline is-12" id="contenedor-categorias">
 
   <div class="contenedor-titulo-categorias">
     <span>Nuestros Productos</span>
@@ -79,7 +82,7 @@
           <h2 class="title-categoria">Electrodomestico</h2>
         </div>
         <div class="container-boton-categoria">
-          <a href="" class="boton-categoria" id="electrodomestico">Ver productos</a>
+          <a href="" class="boton-categoria" id="clickelectrodomestico">Ver productos</a>
         </div>
       </div>
     </div>
@@ -95,7 +98,7 @@
             <h2 class="title-categoria">Construccion</h2>
           </div>
           <div class="container-boton-categoria">
-            <a href="" class="boton-categoria">Ver productos</a>
+            <a href="" class="boton-categoria" id="clickconstruccion">Ver productos</a>
           </div>
         </div>
       </div>
@@ -111,7 +114,7 @@
               <h2 class="title-categoria">Ferreteria</h2>
             </div>
             <div class="container-boton-categoria">
-              <a href="" class="boton-categoria">Ver productos</a>
+              <a href="" class="boton-categoria" id="ferreteria">Ver productos</a>
             </div>
           </div>
         </div>
@@ -122,47 +125,59 @@
   </div>
 
 </div>
-
-<div class="categori-categori">
-    <div class="menu-categs-box">	
-        <?php 
-        $wcatTerms = get_terms('product_cat', array('hide_empty' => 0, 'orderby' => 'ASC',  'parent' =>0)); //, 'exclude' => '17,77'
-          foreach($wcatTerms as $wcatTerm) : 
-            $wthumbnail_id = get_woocommerce_term_meta( $wcatTerm->term_id, 'thumbnail_id', true );
-            $wimage = wp_get_attachment_url( $wthumbnail_id );
-          ?>
-          <ul>
-            <li class="libreak"><?php if($wimage!=""):?><img src="<?php echo $wimage?>"><?php endif;?></li>
-            <li>
-              <a href="<?php echo get_term_link( $wcatTerm->slug, $wcatTerm->taxonomy ); ?>"><?php echo $wcatTerm->name; ?></a>
-              <ul class="wsubcategs">
-              <?php
-              $wsubargs = array(
-                 'hierarchical' => 1,
-                 'show_option_none' => '',
-                 'hide_empty' => 0,
-                 'parent' => $wcatTerm->term_id,
-                 'taxonomy' => 'product_cat'
-              );
-              $wsubcats = get_categories($wsubargs);
-              foreach ($wsubcats as $wsc):
-              ?>
-                <li><a href="<?php echo get_term_link( $wsc->slug, $wsc->taxonomy );?>"><?php echo $wsc->name;?></a></li>
-              <?php
-              endforeach;
-              endforeach;
-              ?>  
-              </ul>
-            </li>
-
-</div>
-
-
-
-                
-
-
-
+<!--electrodomestico-->
+  <div class="contenedor-padre-producto-categoria columns is-multiline is-12" id="electrodomestico" style="display:none;">
+    <div class="header-categoria-producto">
+      <span class="titulo-categoria-producto">Electrodomestico</span>
+      <a href="" class="volver-cate" id="volver-categoria">Volver a categoria</a>
+    </div>
+    @foreach(array_slice($electrodomestico_loop,0,4) as $electrodomestico)
+      <div class="contenedor-productos column is-3">
+        <div class="contenedor-producto-hijo">
+          <div class="cajita-contenido-producto">
+          <div class="imgproducto">
+            {!! $electrodomestico['thumbnail'] !!}
+          </div>
+            <div class="contenedor-titulo-producto">
+              <p class="titulo-producto-categoria">{!! $electrodomestico['title'] !!}</p>
+            </div>
+            <div class="contenedor-boton-producto-categoria">
+              <p class="producto-precio">Precio referencial: <strong>${!! $electrodomestico['price'] !!}</strong></p>
+              <a href="{!! $electrodomestico['link'] !!}" class="boton-producto-categoria" >Ver producto</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    @endforeach
+  </div>
+<!--electrodomestico-->
+  
+<!--Construccion-->
+  <div class="contenedor-padre-producto-categoria columns is-multiline is-12 " id="construccion" style="display:none;">
+    <div class="header-categoria-producto">
+      <span class="titulo-categoria-producto">Electrodomestico</span>
+      <a href="" class="volver-cate" id="volver-categoria1">Volver a categoria</a>
+    </div>
+    @foreach(array_slice($construccion_loop,0,4) as $construccion)
+      <div class="contenedor-productos column is-3">
+        <div class="contenedor-producto-hijo">
+          <div class="cajita-contenido-producto">
+          <div class="imgproducto">
+            {!! $construccion['thumbnail'] !!}
+          </div>
+            <div class="contenedor-titulo-producto">
+              <p class="titulo-producto-categoria">{!! $construccion['title'] !!}</p>
+            </div>
+            <div class="contenedor-boton-producto-categoria">
+              <p class="producto-precio">Precio referencial: <strong>${!! $construccion['price'] !!}</strong></p>
+              <a href="{!! $construccion['link'] !!}" class="boton-producto-categoria" >Ver producto</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    @endforeach
+  </div>
+<!--construccion-->
 
 
 <!--fin de categorias-->

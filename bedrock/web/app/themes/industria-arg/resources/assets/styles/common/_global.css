@@ -2,10 +2,25 @@ html,body {
     margin: 0;
     padding: 0;
     letter-spacing: 2px !important;
+    background-color: #F4F4F4;
 }
 .container{
     max-width: none;
     width: 100%;
+}
+.circulo-blanco{
+    display: flex;
+    justify-content: flex-start;
+    position: absolute;
+    max-width: none;
+    overflow: hidden;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: white;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
 }
 
 .banner{
@@ -886,6 +901,172 @@ html,body {
 .producto-precio strong{
     color: #21BCD0;
 }
+
+/*NOSOTROS---------------------------------*/
+
+.contenedor-fondo-circular{
+    background-color: rgba(33, 188, 208, 0.4);
+}
+.contenedor-title-nosotros{
+    border: 80px solid rgba(33, 188, 208, 0.6);
+    text-align: center;
+    width: 170vh;
+    height: 170vh;  
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 80%;
+    left: 50%;
+    transform: translate(0%,-31%);
+}
+
+.contenedor-title-nosotros h2{
+    top: 44%;
+    position: relative;
+    color: white;
+    font-size: 55px;
+    font-weight: 700;
+    text-transform: uppercase;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.3));
+}
+.contenedor-img-parte-uno{
+    width: 75%;
+    height: 75%;
+    padding-top: 5%;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.contenedor-texto-parte-uno{
+    padding: 3%;
+    width: 90%;
+    padding-left: 25vh;
+    text-align: justify;
+}
+.contenedor-texto-parte-uno h2{
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgb(33, 188, 208);
+
+}
+.contenedor-texto-parte-uno p{
+    padding-top: 3%;
+    padding-bottom: 5%;
+}
+
+.parte-ventajas{
+    text-align: justify;
+    padding-left: 25vh;
+    background-color: white;
+    
+}
+.parte-ventajas h2{
+    margin-top: 10%;
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgb(33, 188, 208);
+}
+.parte-ventajas p{
+    width: 86%;
+    margin-top: 10%;
+    color: black;
+}
+
+
+.tercera-parte-nosotros{
+    text-align: center
+}
+.tercera-parte-nosotros h2{
+    padding-top: 5%;
+    margin: 0 auto;
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgb(33, 188, 208);
+}
+.tercera-parte-nosotros p{
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 2%;
+    padding-bottom: 3%;
+}
+.contenedor-img-circular{
+    overflow: hidden;
+    width: 60vh;
+    height: 60vh;
+    margin: 0 auto;
+    border-radius: 190px;
+    border: 25px solid rgba(33, 188, 208, 0.6);
+}
+.contenedor-img-circular img{
+    width: 600px;
+    height: auto;
+    position: relative;
+    right: 144px;
+    max-width: none !important;
+}
+.cada-ventaja-nosotros{
+    background-color: #E9E649;
+    position: relative;
+}
+.nosotros .contenedor-circulos{
+    position: relative;
+    margin-left: 5%;
+    align-items: center;
+    padding: 4%;
+    display: inline-block;
+}
+.nosotros .contenedor-contenido-ventaja{
+    height: 35vh;
+    width: 35vh;
+}
+.nosotros .imgseccion{
+    width: 118px;
+    height: 118px;
+    padding-top: 12%;
+}
+.nosotros .contenido-ventajas{
+    text-align: center;
+    color: #21BCD0;
+}
+.contenedor-padre-img-nosotros{
+    margin-bottom: 7%
+}
+.header-categoria-producto{
+    width: 100%;
+}
+.titulo-categoria-producto{
+    color: #21BCD0;
+    position: relative;
+    margin-left: 11%;
+    float: left;
+    font-weight: 700;
+    text-transform: uppercase;;
+}
+.volver-cate{
+    color: #21BCD0;
+    position: relative;
+    float: right;
+    margin-right: 10%;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+/*FIN DE NOSOTROS-------------------------*/
+
+/*TIENDA---------------------------------*/
+
+
+
+
+/*FIN DE LA TIENDA-----------------------*/
+
+
+.contenedor-padre-producto-categoria{
+    margin-top: 8%;
+}
+
 /*Inicio de responsive*/
 
 @media only screen and (max-width: 1280px) {
