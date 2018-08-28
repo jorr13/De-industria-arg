@@ -9,10 +9,8 @@
 		<div class="tituloslider">
 			<span>Productos recientes</span>
     </div>
-    <div class="circulo-azul">
-      <div class="circulo-blanco">
-      </div>
-    </div>
+    <div class="circulo-azul"></div>
+
 		<ul class="slider">
       @foreach(array_slice($products_loop,0,4) as $products)
         <li>
@@ -42,6 +40,7 @@
         <span class="fa fa-chevron-left"><img src="/app/uploads/2018/08/flecha-bajar.png" alt=""></span>
       </div>
     </div>
+    <div class="circulo-blanco"></div>
 	</div>
   <!--fin del slider-->
   @if(have_rows('seccion_arriba', 30))
@@ -61,7 +60,7 @@
   @else      
   @endif
 <!--Categorias-->
-
+<div class="contenedor-categoria">
 <div class="categorias-contenedor-padre columns is-multiline is-12" id="contenedor-categorias">
 
   <div class="contenedor-titulo-categorias">
@@ -120,10 +119,6 @@
         </div>
       </div>
   </div>
-  <div class="boton-categoria-ir-tienda">
-    <a href="">Ir a Tienda</a>
-  </div>
-
 </div>
 <!--electrodomestico-->
   <div class="contenedor-padre-producto-categoria columns is-multiline is-12" id="electrodomestico" style="display:none;">
@@ -151,7 +146,6 @@
     @endforeach
   </div>
 <!--electrodomestico-->
-  
 <!--Construccion-->
   <div class="contenedor-padre-producto-categoria columns is-multiline is-12 " id="construccion" style="display:none;">
     <div class="header-categoria-producto">
@@ -177,8 +171,12 @@
       </div>
     @endforeach
   </div>
+  <div class="boton-categoria-ir-tienda">
+    <a href="">Ir a Tienda</a>
+  </div>
+  
+</div>
 <!--construccion-->
-
 
 <!--fin de categorias-->
 

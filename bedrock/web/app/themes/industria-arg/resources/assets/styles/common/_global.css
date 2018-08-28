@@ -20,7 +20,8 @@ html,body {
     background: white;
     top: 50%;
     left: 8%;
-    transform: translateY(-50%);
+    transform: translate(122%,-50%);
+    z-index: 3;
 }
 
 .banner{
@@ -114,6 +115,20 @@ html,body {
     display: block;
     transition: 0.5s;
 }
+footer .ico-contenedor-redes{
+    width: 50px;
+}
+.ico-contenedor-redes svg{
+    fill:white !important;
+    width: 38px;
+    height: 38px;
+    transition: 0.5s;
+}
+.ico-contenedor-redes svg:hover{
+    fill: rgb(233, 230, 73) !important;
+    transition: 0.5s;
+
+}
 
 .segundo-menu .menu-menuprimario-container ul{
     margin-top: 0;
@@ -193,6 +208,7 @@ html,body {
     margin-left: 10%;
 }
 .primercolor{
+    margin-top: 4%;
     box-shadow: 0 0 50px rgba(0,0,0,.2);
     overflow: hidden;
     height: 425px;
@@ -780,7 +796,8 @@ html,body {
     text-transform: uppercase;
 }
 .contenedor-tarjetas-padre{
-    margin-top: 4%;
+    position: absolute;
+    margin-top: 12%;
     width: 100%;
 }
 .contenedor-tarjetas{
@@ -791,7 +808,8 @@ html,body {
 .boton-categoria-ir-tienda{
     width: 100%;
     margin: 0 auto;
-    padding-top: 5%;
+    position: absolute;
+    bottom: 0;
 }
 .boton-categoria-ir-tienda a{ 
     color: white;
@@ -811,10 +829,16 @@ html,body {
 .contenedor-productos{
     padding: 0 !important;
 }
+.contenedor-categoria{
+    position: relative;
+    height: 840px;
+}
 .contenedor-padre-producto-categoria{
+    position: relative;
     padding-bottom: 5%;
     text-align: center;
     justify-content: center;
+    margin: 0px auto;
 }
 .contenedor-productos{
     margin: 1%;
@@ -850,8 +874,8 @@ html,body {
 }
 .contenedor-boton-producto-categoria{
     margin: 0 auto;
-    padding-bottom: 10%;
-    padding-top: 10%;
+    padding-bottom: 6%;
+    padding-top: 6%;
 }
 .boton-producto-categoria{
     color: #21BCD0;
@@ -997,7 +1021,7 @@ html,body {
     width: 60vh;
     height: 60vh;
     margin: 0 auto;
-    border-radius: 190px;
+    border-radius: 220px;
     border: 25px solid rgba(33, 188, 208, 0.6);
 }
 .contenedor-img-circular img{
@@ -1057,15 +1081,126 @@ html,body {
 
 /*TIENDA---------------------------------*/
 
-
-
-
-/*FIN DE LA TIENDA-----------------------*/
-
-
-.contenedor-padre-producto-categoria{
-    margin-top: 8%;
+.shop .woocommerce{
+    padding: 5%;
+    margin-top: 10%;
 }
+ .woocommerce-loop-product__title{
+    background-color: #21BCD0;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    height: 54px;
+    padding: 7% !important;
+    margin-top: -14px !important;
+}
+.shop .price{
+    text-align: center;
+    margin-top: 12px;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    color: #21BCD0 !important;
+    font-size: 15px !important;
+    text-decoration: none;
+}
+ .shop.price ins {
+    text-decoration: none !important;
+}
+ .shop .product {
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+}
+.verproductoshop {
+    align-items: center;
+    background-color: #E9E649 !important;
+    bottom: 13px;
+    margin: 0 auto;
+    color: #21BCD0 !important;
+    display: flex;
+    border-radius: 31px;
+    font-size: 10px !important;
+    font-weight: 700;
+    left: 18%;
+    height: 31px !important;
+    justify-content: center;
+    line-height: 2px !important;
+    opacity: 1 !important;
+    padding: 16px 4px !important;
+    position: absolute;
+    text-transform: uppercase !important;
+    width: 63%;
+    z-index: 99;
+}
+
+.single-product-data .product-type-simple{
+    margin-top: 20%;
+}
+.entry-content{
+    padding-left: 5%;
+    margin-top: -9%;
+    padding-right: 5%;
+}
+.single-product-data .entry-title{
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    color: #21BCD0 !important;
+    float: right;
+    right: 26%;
+    position: relative;
+}
+.single-product-data .updated, .single-product-data .byline {
+display: none;
+}
+.single-product-data .product_meta{
+    display: none;
+}
+.single-product-data  .wc-tabs{
+    display: none;
+}
+/*#tab-description {
+    margin-left: 52%;
+}
+.product-template-default .woocommerce-tabs, .wc-tabs-wrapper {
+    clear: none!important;
+}*/
+.single-product-data .related{
+    margin-top: 23%;
+} 
+.single-product-data .products ul li {
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+}
+.single-product-data .products ul li  .woocommerce-loop-product__title{
+    background-color: #21BCD0;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    height: 54px;
+    padding: 7% !important;
+    margin-top: -14px !important;
+}
+.single-product-data .products ul li .price{
+    text-align: center;
+    margin-top: 12px;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    color: #21BCD0 !important;
+    font-size: 15px !important;
+    text-decoration: none;
+}
+.entry-summary .price{
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    color: #21BCD0 !important;
+    text-decoration: none;
+}
+.comments{
+    display: none;
+}
+.in-stock{
+    color: #21BCD0 !important;
+}
+/*FIN DE LA TIENDA-----------------------*/
 
 /*Inicio de responsive*/
 
