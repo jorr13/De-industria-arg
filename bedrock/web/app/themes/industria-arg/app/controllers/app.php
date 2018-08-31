@@ -100,7 +100,25 @@ function construccionLoop()
         ];
     }, $construccion);
 }
-//categorias
+//traer las noticias
+function postsLoop()
+{
+    $posts = get_posts([
+        'post_type' => 'post',
+    ]);
+
+    return array_map(function ($post) {
+        return [
+            'thumbnail' => get_the_post_thumbnail($post->ID, 'large'),
+            'title' => get_the_title($post->ID),
+            'excerpt' => apply_filters( 'the_excerpt', get_the_excerpt($post->ID) ),
+            'link' => get_permalink($post->ID),
+            'categories' => wp_list_pluck( get_the_category($post->ID),'name'),
+            'content' => apply_filters( 'the_content', get_the_content($post->ID) ),
+            'tags' => get_tags($post->ID)    
+        ];
+    }, $posts);
+}
 
 
 }

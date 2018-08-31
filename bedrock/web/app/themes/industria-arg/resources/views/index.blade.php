@@ -52,7 +52,7 @@
             <div class="contendos ">
             </div>
             <div class="contenedor-parrafo">
-              <p class="contenido">{{ get_sub_field('text_arriba') }}</p>
+              <p class="contenido-primero">{{ get_sub_field('text_arriba') }}</p>
             </div>
           </div>
       </div>
