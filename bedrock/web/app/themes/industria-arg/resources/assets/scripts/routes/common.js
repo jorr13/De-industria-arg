@@ -15,8 +15,30 @@ export default {
           $(".nav-primary").css("display", "block");
       });
     });
-
-
+    //llamada de modal mayorista
+    $(".menu-item-162").click(function (e) { 
+      e.preventDefault();
+      //var email = $(this).data('email');
+      $("#mayorista").fadeIn();
+      //$("#registrar-usuario #email-receptor").val(email);
+    });
+    $("#cerrar, .modal-background").click(function (e) { 
+      e.preventDefault();
+      $("#mayorista").fadeOut();
+    });
+    //agregando boton en woocommerce para llamar a la modal
+    $("li.status-publish").append("<a href='#' class='boton-consultar-precio'>Consultar precio</a>");
+    //llamada de modal mayorista
+    $(".boton-consultar-precio").click(function (e) { 
+    e.preventDefault();
+    //var email = $(this).data('email');
+    $(" #consultar-precio").fadeIn();
+    //$("#registrar-usuario #email-receptor").val(email);
+    });
+    $("#cerrar, .modal-background").click(function (e) { 
+    e.preventDefault();
+    $(" #consultar-precio").fadeOut();
+    });
 
       // JavaScript to be fired on the home page
       $(document).ready(function(){

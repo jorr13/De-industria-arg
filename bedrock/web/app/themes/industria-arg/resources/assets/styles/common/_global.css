@@ -3,7 +3,8 @@ html,body {
     padding: 0;
     letter-spacing: 2px !important;
     background-color: #F4F4F4;
-    height: 100%;
+    height: auto;
+    overflow-x: hidden;
 }
 .el-oculto{
     display: none;
@@ -42,7 +43,7 @@ html,body {
 .banner{
     position: fixed;
     width: 100%;
-    z-index: 999;
+    z-index: 9;
     top: 0;
     background-color: #21BCD0;
 }
@@ -97,7 +98,7 @@ html,body {
     font-weight: 600;
     color: white;
 }
-#menu-item-160, #menu-item-162{
+#menu-item-160, #menu-item-162, #menu-item-179{
     display: none;
 }
 .boton-menu{
@@ -393,6 +394,9 @@ footer .ico-contenedor-redes{
     margin-top: 10%;
     margin-left: 46%;
 }
+.containerfooter{
+    margin-bottom: 0 !important;
+}
 .paginas-footer {
     width: 100%;
     margin-left: 50%;
@@ -457,7 +461,7 @@ footer .ico-contenedor-redes{
 .contenedor-input{
     padding: 10%;
 }
-.contenedor-input input{
+.contenedor-input input, .contenedor-input textarea{
     width: 100%;
     margin-bottom: 4%;
     border-radius: 20px;
@@ -477,9 +481,10 @@ footer .ico-contenedor-redes{
     background-color: #E9E649;
     display: block;
     width: 44%;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 700;
     margin: 0 auto;
+    border: 0;
     padding: 8px 15px;
     position: relative;
     text-align: center;
@@ -619,6 +624,10 @@ footer .ico-contenedor-redes{
     }
 }
 @media screen and (max-width: 600px){
+    .modal-card {
+        width: 450px !important;
+        left: 46% !important;
+    }
     .slideshow {
         margin-bottom: -13% !important;
     }
@@ -1148,7 +1157,28 @@ footer .ico-contenedor-redes{
 /*FIN DE NOSOTROS-------------------------*/
 
 /*TIENDA---------------------------------*/
-
+.woocommerce span.onsale{
+    z-index: 2 !important;
+}
+.boton-consultar-precio{
+    color: white;
+    background-color: #21BCD0;
+    display: block;
+    width: 68%;
+    height: 31px !important;
+    font-size: 10px;
+    margin: 0 auto;
+    font-weight: 700;
+    margin-top: -5px;
+    padding: 8px 15px;
+    position: relative;
+    text-align: center;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+.woocommerce .page-header{
+    display: none;
+}
 .shop .woocommerce{
     padding: 5%;
     margin-top: 10%;
@@ -1181,7 +1211,7 @@ footer .ico-contenedor-redes{
 .verproductoshop {
     align-items: center;
     background-color: #E9E649 !important;
-    bottom: 40px;
+    bottom: 25px;
     margin: 0 auto;
     color: #21BCD0 !important;
     display: flex;
@@ -1196,8 +1226,9 @@ footer .ico-contenedor-redes{
     padding: 16px 4px !important;
     position: absolute;
     text-transform: uppercase !important;
-    width: 63%;
-    z-index: 99;
+    width: 68%;
+    z-index: 8;
+    margin-left: -2%;
 }
 
 .single-product-data .product-type-simple{
@@ -1383,12 +1414,16 @@ a.link.posts-link {
 /* DETALLE DE NOTICIAS-------------------------------*/
 .post .comments {
     display: block;
+    padding-bottom: 8%;
 }
 .updated, .byline{
     display: none;
 }
 .post .entry-content {
     margin-top: 10%;
+    padding-left: 16%;
+    padding-right: 16%;
+    padding-bottom: 3%;
 }
 .post .entry-title{
     text-align: center;
@@ -1427,13 +1462,14 @@ a.link.posts-link {
     display: none;
 }
 .post h2{
+    margin-bottom: 20px;
     font-size: 25px;
     font-weight: 700;
     text-transform: uppercase;
     color: #21BCD0;
 }
 .post h3{
-    
+    margin-bottom: 20px;
         font-size: 20px;
         font-weight: 700;
         text-transform: uppercase;
@@ -1441,17 +1477,17 @@ a.link.posts-link {
 
 }
 .post h4{
+    margin-bottom: 20px;
     font-size: 15px;
     font-weight: 700;
     text-transform: uppercase;
     color: black;
 }
 .post blockquote {
+    margin-bottom: 20px !important;
     width: 50%;
     margin-left: 6%;
-    box-shadow: 9px 9px 31px rgba(0, 0, 0, 0.2);
     font-size: 15px;
-    font-weight: 700;
     text-align: center;
     text-transform: uppercase;
     color: white;
@@ -1459,7 +1495,14 @@ a.link.posts-link {
     border-left: 0 !important;
     padding: 1.25em 1.5em;
 }
+.post ul{
+    margin-left: 9%;
+}
+.post ol {
+    margin-left: 9%;
+}
 .post li{
+    margin-bottom: 20px;
     list-style: none;
     position: relative;
 }
@@ -1474,10 +1517,227 @@ a.link.posts-link {
     transform: translateY(-50%);
 }
 .post img{
+    margin-bottom: 20px;
     width: 100%
 }
+.post .comment-respond{
+    padding-left: 16%;
+    padding-right: 16%;
+    padding-top: 5%;
+}
+.post #reply-title{
+    font-weight: 400;
+}
+.post .comment-respond label{
+    font-weight: 400;
 
+}
+.post .comment-respond textarea{
+    color: white;
+    background: #21BCD0;
+}
+.post .comment-respond #author, .post .comment-respond #email ,.post .comment-respond #url{
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: 0;
+    background-color: #F4F4F4;
+    box-shadow: none;
+}
+.post .comment-respond .comment-form-cookies-consent label {
+    font-size: 10px;
+    position: relative;
+    display: inline-block;
+    margin-left: 2%;
+}
+.post .comment-respond .comment-form-cookies-consent #wp-comment-cookies-consent{
+    position: absolute;
+    margin-top: 6px;
+}
+.post #submit{
+    color: white;
+    background-color: #21BCD0;
+    display: block;
+    width: 260px;
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 25px;
+    position: relative;
+    text-align: center;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+.comments .comment-list {
+    position: relative;
+    margin-left: 17%;
+    width: 67%;
+    background: white;
+    box-shadow: 9px 18px 65px rgba(0, 0, 0, 0.2);
+}
+.comments .comment-list li::before{
+    display: none;
+}
+.comments .comment-list::before{
+    content: '';
+    z-index: 1;
+    position: absolute;
+    width: 9px;
+    height: 100%;
+    background: #21BCD0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.comments h2{
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #21BCD0;
+    padding-left: 16%;
+    padding-right: 16%;
+}
+.comments .comment-content p{
+    width: 90%;
+    color: black;
+}
+.comments .comment-author{
+    margin-bottom: 15px !important;
+    padding: 2%;
+    height: 66px;
+    background-color: #E6E6E6;
+}
+.comments .comment-list .comment-author .fn a{
+    color: black;
+}
+.comments .comment-list img{
+    margin-bottom: 0px;
+    width: 32px;
+}
+.comments .comment-metadata{
+    margin-left: 25px;
+    margin-bottom: 15px !important;
+}
+.comments .comment-metadata a{
+color: black;
+}
+.comments .comment-awaiting-moderation{
+    margin-left: 25px;
+}
+.comments .comment-content{
+    margin-left: 25px;
+}
+.comments .reply{
+    padding-bottom: 3%;
+}
+.comments .reply a {
+    margin-left: 25px;
+    color: white;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background-color: #21BCD0;
+    display: block;
+    width: 260px;
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 25px;
+    position: relative;
+    text-align: center;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+.comments .comment-reply-title{
+color: black;
+}
+.comments .comment-reply-title a{
+    color: black;
+}
+.comments  .children .comment-body{
+    width: 75%;
+    box-shadow: 9px 18px 65px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+.comments .children .comment-body::before{
+    content: '';
+    position: absolute;
+    width: 9px;
+    height: 100%;
+    background: #21BCD0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.comments .thread-odd {
+    margin-top: 55px !important;
+}
 /* FIN detellae DE NOTICIAS-------------------------------*/
+
+/* EMPRESAS QUE CONFIAN-------------------------------*/
+.page-template-empresas .page-header{
+    display: none;
+}
+.page-template-empresas .contenedor-empresas-confian{
+    padding-bottom: 12%;
+}
+.contenedor-empresas-confian .boton-categoria-ir-tienda{
+    position: relative;
+    padding-top: 5%;
+}
+/* FIN EMPRESAS QUE CONFIAN---------------------------*/
+/* estilos de las modales---------------------------*/
+.modal-background{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.30) !important;
+}
+.modal-card{
+    margin-top: 3%;
+    width: 560px;
+}
+.modal-card .boton-enviar {
+    width: 30%;
+}
+
+.imgmodal{
+    margin-top: 0%;
+    width: 25%;
+}
+.modal-card-head, .modal-card-foot {
+    background-color: #21BCD0;
+}
+
+.modal-card-title{
+    margin-top: 8px !important;
+    text-align: center;
+    margin-left: -6%;
+    color: white;
+    text-transform: uppercase;
+}
+.modal-card-body .nombremodal, .modal-card-body .emailmodal, .modal-card-body .tlfmodal, .containermensaje{
+    padding: 10px;
+    margin-top: 10px;
+    padding-bottom: 15px;
+    width: 510px;
+    border-style: none;
+    border-bottom: 1px solid black !important;
+    font-size: 20px;
+    z-index: 9999999999999999999;
+    color: white;
+    background: #21BCD0;
+}
+.modal-card-foot{
+    flex-direction: column;
+}
+.modal-card-body textarea{
+    padding-top: 1%;
+}
+.modal-card-body .title-con-nosotros{
+    width: 100%;
+    padding-bottom: 5%;
+    margin-top: -8%;
+}
+.modal-card-body .title-con-nosotros h2{
+    margin-top: 0;
+}
+/* FIN estilos de las modales---------------------------*/
 /*Inicio de responsive*/
 
 @media only screen and (max-width: 1280px) {
@@ -1703,6 +1963,9 @@ a.link.posts-link {
     }
 }
 @media only screen and (max-width: 768px) {
+    .modal-card-body input, .modal-card-body textarea {
+        width: 415px !important;
+    }
     .otro-menu .menu-item {
         font-size: 16px !important;
         padding-right: 12px !important;
@@ -1963,6 +2226,7 @@ a.link.posts-link {
     }
     .woocommerce span.onsale{
         top: 3.5em;
+        z-index: 2 !important;
     }
     .woocommerce div.product div.images .woocommerce-product-gallery__trigger{
         top: 1.5em;
@@ -2249,6 +2513,9 @@ a.link.posts-link {
     .menu-menuprimario-container ul {
         display: none;
     }
+    #menu-item-158, #menu-item-163{
+        display: none;
+    }
     .boton-menu {
         margin-right: -10%;
         margin-top: -25%;
@@ -2507,7 +2774,19 @@ a.link.posts-link {
         border: 36px solid #4CC7D6;
     }
 }
-
+@media only screen and (max-width: 420px) {
+    .modal-card{
+    width: 300px !important;
+    } 
+    .modal-card-title{
+        margin-top: 0px !important;
+        font-size: 10px !important;
+    }
+    .modal-card-body input,  .modal-card-body textarea{
+        font-size: 10px !important;
+        width: 260px !important;
+    }
+}
 @media only screen and (max-width: 365px) {
     .boton-ventaja a {
         margin-bottom: 30%;

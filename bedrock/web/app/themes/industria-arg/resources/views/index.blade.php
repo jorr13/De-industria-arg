@@ -172,7 +172,7 @@
     @endforeach
   </div>
   <div class="boton-categoria-ir-tienda">
-    <a href="">Ir a Tienda</a>
+    <a href="/shop/">Ir a Tienda</a>
   </div>
   
 </div>
@@ -205,21 +205,23 @@
       <span class="contenedor-titulo">Empresas que confian en nosotros</span>
     </div>
     <div class="empresas-confian columns is-multiline is-paddingless is-12">
-        @if(have_rows('empresas_que_confian', 49))
-        {{-- loop through the rows of data --}}
-        @while (have_rows('empresas_que_confian', 49))@php(the_row())
-          <div class="img-categoria column is-3 ">
-            <a href="{{ get_sub_field('dominio_img') }}">
-              <div class="contenedorimg-confian">
-                <img src="{{ get_sub_field('img_empresa') }}" alt="">
-              </div>
-            </a>
-          </div>
-        @endwhile 
-        @else      
+        @php($empresas = get_field('empresas_que_confian', 49))
+        @if($empresas)
+        @foreach (array_slice($empresas,0,8) as $empresa)
+        <div class="img-categoria column is-3 ">
+          <a href="{{ $empresa['dominio_img'] }}">
+            <div class="contenedorimg-confian">
+              <img src="{{ $empresa['img_empresa'] }}" alt="">
+            </div>
+          </a>
+        </div>
+        @endforeach
         @endif
     </div>
-</div>
+    <div class="boton-categoria-ir-tienda">
+      <a href="/clientes/">Ir a clientes</a>
+    </div>
+  </div>
   <!--fin empresas amigas-->
 
   <!--ventajas--> 

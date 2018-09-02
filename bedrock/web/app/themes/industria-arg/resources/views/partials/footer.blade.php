@@ -89,4 +89,35 @@
     </div>
     <div class="parte-vacia column is-1"></div>
   </div>
+
+  <!--modal mayoristas-->
+  <div id="mayorista" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <div class="imgmodal">
+                <img src="{{ home_url('app/uploads/2018/08/DIA-logo-02.png') }}">
+            </div>
+            <p class="modal-card-title">Escribe tu mensaje</p>
+            <button id="cerrar" class="delete" aria-label="close"></button>
+        </header>
+        <form action="post" id="subscription-form">
+            <section class="modal-card-body contenedor-input">
+                <div class="title-con-nosotros">
+                  <h2>pongase en contacto con nosotros</h2>
+                </div>
+                <input placeholder="Nombre y Apellido" id="nombre" type="text">
+                <input placeholder="Correo electronico" id="emailcliente" type="text">
+                <input placeholder="Tema" id="tema" type="text" >
+                <textarea  id="mensaje" placeholder="Su mensaje"></textarea>
+            </section>
+            <footer class="modal-card-foot">
+                <button id="submitemail" class="boton-enviar">Enviar</button> 
+                <span id="returnmessage"></span>
+            </footer>
+        </form>
+    </div>
+  </div>
+    <!--fin modal mayoristas-->
+
 </footer>
