@@ -96,15 +96,15 @@
     <div class="modal-card">
         <header class="modal-card-head">
             <div class="imgmodal">
-                <img src="{{ home_url('app/uploads/2018/08/DIA-logo-02.png') }}">
+                <img src="{{ home_url('app/uploads/2018/08/iso.png') }}">
             </div>
-            <p class="modal-card-title">Escribe tu mensaje</p>
+            <p class="modal-card-title">Mayorista</p>
             <button id="cerrar" class="delete" aria-label="close"></button>
         </header>
         <form action="post" id="subscription-form">
             <section class="modal-card-body contenedor-input">
                 <div class="title-con-nosotros">
-                  <h2>pongase en contacto con nosotros</h2>
+                  <h2>Si está interesado en realizar una compra mayorista a continuación ingrese sus datos, detalle de su consulta o solicitud de cotización y nos contactaremos a la brevedad</h2>
                 </div>
                 <input placeholder="Nombre y Apellido" id="nombre" type="text">
                 <input placeholder="Correo electronico" id="emailcliente" type="text">

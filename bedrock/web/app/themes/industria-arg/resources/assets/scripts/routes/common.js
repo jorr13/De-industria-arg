@@ -42,6 +42,11 @@ export default {
     $(" #consultar-precio").fadeOut();
     });
 
+    //llamada del titulo en la tienda
+    $(document).ready(function(){
+      $(".prdctfltr_wc").before("<div class='contenedor-titulo-categorias'><span>Nuestros Productos</span></div><div class='contenedor-descrip'><p class='primero-parrafo'>Adquiere tus productos de industria argentina</p><p class='segundo-parrafo'>Empresas 100% locales</p></div>");
+    });
+
       // JavaScript to be fired on the home page
       $(document).ready(function(){
         var imgItems = $('.slider li').length; // Numero de Slides

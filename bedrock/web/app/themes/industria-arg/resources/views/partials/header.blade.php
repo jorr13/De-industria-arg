@@ -72,9 +72,9 @@
             <div class="modal-card">
                 <header class="modal-card-head">
                     <div class="imgmodal">
-                        <img src="{{ home_url('app/uploads/2018/08/DIA-logo-02.png') }}">
+                        <img src="{{ home_url('app/uploads/2018/08/iso.png') }}">
                     </div>
-                    <p class="modal-card-title">Escribe tu mensaje</p>
+                    <p class="modal-card-title">Consultar precio</p>
                     <button id="cerrar" class="delete" aria-label="close"></button>
                 </header>
                 <form action="post" id="subscription-form">

@@ -121,62 +121,67 @@
   </div>
 </div>
 <!--electrodomestico-->
-  <div class="contenedor-padre-producto-categoria columns is-multiline is-12" id="electrodomestico" style="display:none;">
-    <div class="header-categoria-producto">
-      <span class="titulo-categoria-producto">Electrodomestico</span>
-      <a href="" class="volver-cate" id="volver-categoria">Volver a categoria</a>
-    </div>
+<div class="producto-contenedor-padre columns is-multiline is-12" id="electrodomestico" style="display:none" >
+  <div class="contenedor-tarjetas-producto" >
+      <div class="header-categoria-producto">
+          <span class="titulo-categoria-producto">Electrodomestico</span>
+          <a href="" class="volver-cate" id="volver-categoria">Volver a categoria</a>
+        </div>
     @foreach(array_slice($electrodomestico_loop,0,4) as $electrodomestico)
-      <div class="contenedor-productos column is-3">
-        <div class="contenedor-producto-hijo">
-          <div class="cajita-contenido-producto">
-          <div class="imgproducto">
-            {!! $electrodomestico['thumbnail'] !!}
-          </div>
-            <div class="contenedor-titulo-producto">
-              <p class="titulo-producto-categoria">{!! $electrodomestico['title'] !!}</p>
-            </div>
-            <div class="contenedor-boton-producto-categoria">
-              <p class="producto-precio">Precio referencial: <strong>${!! $electrodomestico['price'] !!}</strong></p>
-              <a href="{!! $electrodomestico['link'] !!}" class="boton-producto-categoria" >Ver producto</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    @endforeach
-  </div>
-<!--electrodomestico-->
-<!--Construccion-->
-  <div class="contenedor-padre-producto-categoria columns is-multiline is-12 " id="construccion" style="display:none;">
-    <div class="header-categoria-producto">
-      <span class="titulo-categoria-producto">Electrodomestico</span>
-      <a href="" class="volver-cate" id="volver-categoria1">Volver a categoria</a>
-    </div>
-    @foreach(array_slice($construccion_loop,0,4) as $construccion)
-      <div class="contenedor-productos column is-3">
-        <div class="contenedor-producto-hijo">
-          <div class="cajita-contenido-producto">
-          <div class="imgproducto">
-            {!! $construccion['thumbnail'] !!}
-          </div>
-            <div class="contenedor-titulo-producto">
-              <p class="titulo-producto-categoria">{!! $construccion['title'] !!}</p>
-            </div>
-            <div class="contenedor-boton-producto-categoria">
-              <p class="producto-precio">Precio referencial: <strong>${!! $construccion['price'] !!}</strong></p>
-              <a href="{!! $construccion['link'] !!}" class="boton-producto-categoria" >Ver producto</a>
+        <div class="contenedor-tarjetas column is-3">
+          <div class="contenedor-hijo column">
+            <div class="cajita-tarjeta">
+              <div class="contenedor-img-tarjeta">
+                {!! $electrodomestico['thumbnail'] !!}
+              </div>
+              <div class="contenedor-title-categoria">
+                <h2 class="title-categoria">{!! $electrodomestico['title'] !!}</h2>
+              </div>
+              <div class="container-boton-categoria">
+                  <p class="producto-precio">Precio referencial: <strong>${!! $electrodomestico['price'] !!}</strong></p>
+                <a href="{!! $electrodomestico['link'] !!}" class="boton-categoria" id="ferreteria">Ver producto</a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    @endforeach
-  </div>
-  <div class="boton-categoria-ir-tienda">
-    <a href="/shop/">Ir a Tienda</a>
-  </div>
-  
+        @endforeach
 </div>
+</div>
+<!--electrodomestico-->
+
 <!--construccion-->
+<div class="producto-contenedor-padre columns is-multiline is-12" id="construccion" style="display:none" >
+    <div class="contenedor-tarjetas-producto" >
+        <div class="header-categoria-producto">
+            <span class="titulo-categoria-producto">Construccion</span>
+            <a href="" class="volver-cate" id="volver-categoria1">Volver a categoria</a>
+          </div>
+          @foreach(array_slice($construccion_loop,0,4) as $construccion)
+          <div class="contenedor-tarjetas column is-3">
+            <div class="contenedor-hijo column">
+              <div class="cajita-tarjeta">
+                <div class="contenedor-img-tarjeta">
+                  {!! $construccion['thumbnail'] !!}
+                </div>
+                <div class="contenedor-title-categoria">
+                  <h2 class="title-categoria">{!! $construccion['title'] !!}</h2>
+                </div>
+                <div class="container-boton-categoria">
+                    <p class="producto-precio">Precio referencial: <strong>${!! $construccion['price'] !!}</strong></p>
+                  <a href="{!! $construccion['link'] !!}" class="boton-categoria" id="ferreteria">Ver producto</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          @endforeach
+  </div>
+  </div>
+  <!--construccion-->
+  <div class="boton-categoria-ir-tienda">
+      <a href="/shop/">Ver Tienda</a>
+    </div>
+</div>
+
 
 <!--fin de categorias-->
 
@@ -186,8 +191,8 @@
     <div class="segundocolor otraclase">
         <p class="contenido-tercer-color">se el primero  en recibir nuestras ofertas y promociones</p>
         <h2>¡Suscribete!</h2>
-        <div class="contenedorcaja-input">       
-          <input type="text" placeholder="Escribe tu correo electronico aqui" class="caja-texto-suscribete">
+        <div class="contenedorcaja-input">    
+          <input type="text" placeholder="escribe tu correo" class="caja-texto-suscribete" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Escribe tu correo electronico aqui'">   
         </div>
         <div class="contenedor-ico-redes">
           <img class="ico-redes" src="app/uploads/2018/08/icon-facebook.png" alt="">
@@ -219,7 +224,7 @@
         @endif
     </div>
     <div class="boton-categoria-ir-tienda">
-      <a href="/clientes/">Ir a clientes</a>
+      <a href="/clientes/">ver clientes</a>
     </div>
   </div>
   <!--fin empresas amigas-->

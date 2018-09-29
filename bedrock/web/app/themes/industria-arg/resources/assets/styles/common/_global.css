@@ -49,7 +49,7 @@ html,body {
 }
 .imgmenu{
     width: 160px;
-    margin: 15px;
+    margin: 20px 15px;
 }
 .menu-item{
     color: white;
@@ -101,7 +101,7 @@ html,body {
     font-weight: 600;
     color: white;
 }
-#menu-item-160, #menu-item-162, #menu-item-179{
+#menu-item-72, #menu-item-179 {
     display: none;
 }
 .boton-menu{
@@ -164,21 +164,20 @@ footer .ico-contenedor-redes{
 
 .boton-cerrar{
     display: none;
-    right: 5px;
-   /*width: 9%;*/ 
+    right: 55px;
+    width: 23%;
     height: auto;
-    top: 2px;
+    top: 57px;
     position: absolute;
-    margin-top: 14px;
-    font-size: 20px;
-    color: white;
-    font-weight: 700;
     padding-top: 20px !important;
     padding-right: 40px;
 }
+.otro-menu  .menu-item-162 a{
+padding-right: 8px !important;
+}
 .otro-menu .menu-item{
-    font-size: 20px !important;
-    padding: 12% !important;
+    font-size: 19px !important;
+    padding: 11% !important;
     text-align: left;
     padding-right: 50px !important;
 }
@@ -378,7 +377,7 @@ footer .ico-contenedor-redes{
     background-color: #21BCD0;
     display: block;
     width: 300px;
-    font-size: 16px;
+    font-size: 12px;
     margin: 0 auto;
     font-weight: 700;
     margin-bottom: 29%;
@@ -505,7 +504,7 @@ footer .ico-contenedor-redes{
     position: absolute;
     width: 20%;
     font-size: 20px;
-    padding-top: 8%;
+    padding-top: 14%;
     margin-left: 5%;
 }
 .tituloslider span{
@@ -556,7 +555,7 @@ footer .ico-contenedor-redes{
 }
 .slider .caption{
     font-size: 30px;
-    margin-top: 15%;
+    margin-top: 20%;
     float: left;
     position: relative;
     width: 37%;
@@ -704,7 +703,7 @@ footer .ico-contenedor-redes{
     background-color: #E9E649;
     display: block;
     width: 44%;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 700;
     padding: 8px 15px;
     position: relative;
@@ -735,7 +734,10 @@ footer .ico-contenedor-redes{
     position: absolute;
     background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
-
+    transition: ease-in 0.5s;
+}
+.padre-botones-slider:hover::after{
+    transform: translate(-50%, -50%) scale(1.05);
 }
 .padre-botones-slider::before{
     content: '';
@@ -747,7 +749,10 @@ footer .ico-contenedor-redes{
     transform: translate(-50%, -50%);
     position: absolute;
     background-color: rgba(233, 230, 73, 0.8);
-
+    transition: ease-in 0.5s;
+}
+.padre-botones-slider:hover::before{
+    transform: translate(-50%, -50%) scale(1.05);
 }
 
 .slider-item-numeros{
@@ -771,6 +776,11 @@ footer .ico-contenedor-redes{
     transform: translatey(-50%) translatex(17px);
     width: 500px;
     height: 500px;
+    transition: ease-in 0.5s;
+}
+.circulo-azul:hover {
+    transform: translatey(-50%) translatex(17px) scale(1.05);
+    /* transition: ease-in 0.5s; */
 }
 /*FIN DEL SLIDERRRRRRRRRRR--------------------*/
 
@@ -778,6 +788,10 @@ footer .ico-contenedor-redes{
 .categorias-contenedor-padre{
     margin-top: 5%;
     padding: 2%;
+    text-align: center;
+}
+.producto-contenedor-padre{
+    margin-top: 0%;
     text-align: center;
 }
 .contenedor-titulo-categorias{
@@ -789,7 +803,7 @@ footer .ico-contenedor-redes{
     text-transform: uppercase;
     font-weight: 700;
     color: #21BCD0 !important;
-    font-size: 40px;
+    font-size: 30px;
 }
 .contenedor-descrip{
     margin-top: 10px;
@@ -799,9 +813,12 @@ footer .ico-contenedor-redes{
     margin: 0 auto;
 }
 .contenedor-descrip p{
-    font-size: 20px;
+    font-size: 16px;
     text-transform: uppercase;
     margin-bottom: 0 !important;
+}
+.cajita-tarjeta{
+    height: 300px;
 }
 .segundo-parrafo{
     font-weight: 700;
@@ -819,19 +836,19 @@ footer .ico-contenedor-redes{
 .contenedor-img-tarjeta{
     background-size: cover;
     width: auto;
-    height: 50vh;
+    height: 28vh;
     margin: 0 auto;
     overflow: hidden;
     position: relative;
 }
 .contenedor-title-categoria{
-    font-size: 12px;
     padding: 5%;
     background: #21BCD0;
-    font-weight: 500;
-    text-transform: uppercase;
 }
 .title-categoria{
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
     color: white !important;
     margin-bottom: 0 !important;
 }
@@ -867,9 +884,9 @@ footer .ico-contenedor-redes{
     color: #21BCD0;
     background-color: #E9E649;
     display: block;
-    width: 59%;
+    width: 75%;
     padding-bottom: 5%;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 700;
     margin: 0 auto;
     padding: 8px 15px;
@@ -879,14 +896,36 @@ footer .ico-contenedor-redes{
     text-transform: uppercase;
 }
 .contenedor-tarjetas-padre{
+    max-width: 900px;
     position: absolute;
+    left: 50%;
     margin-top: 10%;
-    width: 100%;    
+    width: 100%;
     justify-content: center;
+    transform: translate(-50%);
+}
+.contenedor-tarjetas-categoria{
+    max-width: 900px;
+    position: absolute;
+    left: 50%;
+    margin-top: 10%;
+    width: 100%;
+    justify-content: center;
+    transform: translate(-50%);
+}
+.contenedor-tarjetas-producto{
+    max-width: 900px;
+    position: absolute;
+    left: 50%;
+    margin-top: 4px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    transform: translate(-50%);
 }
 .contenedor-tarjetas{
     display: inline-block;
-    margin: 1.2%;
+    margin: 1.4%;
 }
 
 .boton-categoria-ir-tienda{
@@ -899,8 +938,8 @@ footer .ico-contenedor-redes{
     color: white;
     background-color: #21BCD0;
     display: block;
-    width: 300px;
-    font-size: 16px;
+    width: 240px;
+    font-size: 12px;
     margin: 0 auto;
     font-weight: 700;
     margin-top: -5px;
@@ -915,14 +954,20 @@ footer .ico-contenedor-redes{
 }
 .contenedor-categoria{
     position: relative;
-    height: 130vh;
+    height: 86vh;
 }
 .contenedor-padre-producto-categoria{
-    position: a;
-    padding-bottom: 5%;
+    max-width: 900px;
+    position: absolute;
+    left: 50%;
+    width: 100%;
     text-align: center;
     justify-content: center;
-    margin: 0px auto;
+    transform: translate(-48.9%);
+    margin-top: -21px;
+}
+.container-boton-categoria p{
+    font-size: 11px;
 }
 .contenedor-productos{
     margin: 1%;
@@ -965,7 +1010,7 @@ footer .ico-contenedor-redes{
     color: #21BCD0;
     background-color: #E9E649;
     display: block;
-    width: 59%;
+    width: 58%;
     padding-bottom: 5%;
     font-size: 12px;
     font-weight: 700;
@@ -1143,6 +1188,8 @@ footer .ico-contenedor-redes{
     margin-bottom: 7%
 }
 .header-categoria-producto{
+    padding-bottom: 3%;
+    margin-top: -3%;
     width: 100%;
 }
 .titulo-categoria-producto{
@@ -1164,8 +1211,33 @@ footer .ico-contenedor-redes{
 /*FIN DE NOSOTROS-------------------------*/
 
 /*TIENDA---------------------------------*/
+prdctfltr_woocommerce_ordering scrollbar {
+    width: 5px;
+    border-radius: 35px;
+    background: #f1f1f1; 
+}
+
+.shop .contenedor-titulo-categorias{
+    margin-top: 10%
+}
 .woocommerce span.onsale{
     z-index: 3 !important;
+}
+.onsale {
+    visibility: hidden;
+}
+.onsale:after {
+    background-image: url(/app/uploads/2018/08/icon-descuento.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    height: 80px !important;
+    left: 30px !important;
+    position: absolute !important;
+    top: 0 !important;
+    visibility: visible !important;
+    width: 80px !important;
+    z-index: 999999999 !important;
 }
 .boton-consultar-precio{
     color: white;
@@ -1188,7 +1260,7 @@ footer .ico-contenedor-redes{
 }
 .shop .woocommerce{
     padding: 5%;
-    margin-top: 10%;
+    margin-top: -2%;
 }
  .woocommerce-loop-product__title{
     background-color: #21BCD0;
@@ -1705,7 +1777,7 @@ color: black;
 
 .imgmodal{
     margin-top: 0%;
-    width: 25%;
+    width: 10%;
 }
 .modal-card-head, .modal-card-foot {
     background-color: #21BCD0;
@@ -1743,6 +1815,8 @@ color: black;
 }
 .modal-card-body .title-con-nosotros h2{
     margin-top: 0;
+    font-size: 12px;
+    text-transform: none;
 }
 /* FIN estilos de las modales---------------------------*/
 /*Inicio de responsive*/
