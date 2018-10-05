@@ -79,9 +79,9 @@
                 </header>
                 <form action="post" id="subscription-form">
                     <section class="modal-card-body contenedor-input">
+                        <input placeholder="Tema" id="titulo-producto" type="text" disabled >
                         <input placeholder="Nombre y Apellido" id="nombre" type="text">
                         <input placeholder="Correo electronico" id="emailcliente" type="text">
-                        <input placeholder="Tema" id="titulo-producto" type="text" >
                         <textarea  id="mensaje" placeholder="Su mensaje"></textarea>
                     </section>
                     <footer class="modal-card-foot">

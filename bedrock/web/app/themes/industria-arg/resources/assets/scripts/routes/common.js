@@ -41,6 +41,20 @@ export default {
     e.preventDefault();
     $(" #consultar-precio").fadeOut();
     });
+    //llamada al boton detalle
+    $(".single-product .shipping-taxable .entry-summary").append("<a href='#' class='boton-consultar-precio-detalle-producto'>Consultar precio</a>");
+   //llamada de modal detalle
+   $(".boton-consultar-precio-detalle-producto").click(function (e) { 
+    e.preventDefault();
+
+    var titulo =  $(".entry-title").text();
+    $(" #consultar-precio").fadeIn();
+    $("#consultar-precio #titulo-producto").val(titulo);
+    });
+    $("#cerrar, .modal-background").click(function (e) { 
+    e.preventDefault();
+    $(" #consultar-precio").fadeOut();
+    });
 
     //llamada del titulo en la tienda
     $(document).ready(function(){

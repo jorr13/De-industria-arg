@@ -239,9 +239,9 @@ padding-right: 8px !important;
     position: relative;
 }
 .segundocolor{
-    width: 175vh;
-    height: 175vh;
-    transform: translateY(-29.5%);
+    width: 960px;
+    height: 960px;
+    transform: translateY(-27.5%);
     border: 68px solid #4CC7D6;
     border-radius: 360%;
     background-color: white;
@@ -451,6 +451,12 @@ padding-right: 8px !important;
     box-shadow: 0 0 50px rgba(0,0,0,.2);
     position: relative;
     background-color: white;
+    transition: ease-in 0.5s;
+    overflow: hidden;
+}
+.partedos:hover{
+    transform: translateY(-10px);
+
 }
 .title-con-nosotros{
     margin: 0 auto;
@@ -630,34 +636,43 @@ padding-right: 8px !important;
     }
 }
 @media screen and (max-width: 600px){
+    .slider .caption {
+        margin-top: 54% !important;
+        margin-left: 25%;
+    }
     .modal-card {
         width: 450px !important;
         left: 46% !important;
     }
     .slideshow {
-        margin-bottom: -13% !important;
+        margin-bottom: 0% !important;
     }
     
     .slider li {
         padding-top: 25%;
     }
     .boton-slider {
-        width: 85% !important;
+        width: 100% !important;
         margin-top: 15%;
     }
     .slider .caption {
-        margin-top: -20% !important;
         left: -4% !important;
+    }
+    .primera_parte {
+        margin-top: 23%;
     }
     
     .tituloslider {
         margin-left: 0px !important;
-        margin-top: 5%;
+        margin-top: -10px;
+        padding-top: 0;
+        width: 100%;
+        left: 15%;
     }
-    .tituloslider span {
-        margin-top: -100%;
- 
+    .primera_parte {
+        margin-top: 22% !important;
     }
+
     .modal-card {
         width: 450px !important;
         left: 46% !important;
@@ -778,10 +793,7 @@ padding-right: 8px !important;
     height: 500px;
     transition: ease-in 0.5s;
 }
-.circulo-azul:hover {
-    transform: translatey(-50%) translatex(17px) scale(1.05);
-    /* transition: ease-in 0.5s; */
-}
+
 /*FIN DEL SLIDERRRRRRRRRRR--------------------*/
 
 /*Categorias---------------------------------*/
@@ -954,7 +966,7 @@ padding-right: 8px !important;
 }
 .contenedor-categoria{
     position: relative;
-    height: 86vh;
+    height: 560px;
 }
 .contenedor-padre-producto-categoria{
     max-width: 900px;
@@ -1057,6 +1069,10 @@ padding-right: 8px !important;
 
 /*NOSOTROS---------------------------------*/
 
+.nosotros .page-header{
+    display: none;
+}
+
 .contenedor-fondo-circular{
     background-color: rgba(33, 188, 208, 0.4);
 }
@@ -1147,14 +1163,14 @@ padding-right: 8px !important;
 }
 .contenedor-img-circular{
     overflow: hidden;
-    width: 60vh;
-    height: 60vh;
+    width: 600px;
+    height: 600px;
     margin: 0 auto;
-    border-radius: 220px;
-    border: 25px solid rgba(33, 188, 208, 0.6);
+    border-radius: 313px;
+    border: 63px solid rgba(33, 188, 208, 0.6);
 }
 .contenedor-img-circular img{
-    width: 600px;
+
     height: auto;
     position: relative;
     right: 144px;
@@ -1231,13 +1247,16 @@ prdctfltr_woocommerce_ordering scrollbar {
     background-repeat: no-repeat;
     background-size: contain;
     content: "";
-    height: 80px !important;
+    height: 65px !important;
     left: 30px !important;
     position: absolute !important;
     top: 0 !important;
     visibility: visible !important;
-    width: 80px !important;
+    width: 65px !important;
     z-index: 999999999 !important;
+}
+.noticias .modal-card-foot{
+    margin-top: 0;
 }
 .boton-consultar-precio{
     color: white;
@@ -1402,6 +1421,128 @@ display: none;
 }
 .woocommerce div.product p.price ins, .woocommerce div.product span.price ins{
     text-decoration: none;
+}
+.prdctfltr-bars{
+    color: #21BCD0 !important;
+}
+.prdctfltr_woocommerce_ordering{
+    background-color: #21BCD0 !important;
+    clip: rect(0px, 302px, auto, auto);
+    color: white;
+}
+.prdctfltr_close_sidebar{
+    color: white !important;
+    margin-top: 20%;
+}
+.prdctfltr_close_sidebar::before{
+    background-image: url(/app/uploads/2018/08/DIA-logo-02.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    height: 160px !important;
+    width: 160px !important;
+    left: 30px !important;
+    position: absolute !important;
+    top: 22px !important;
+    visibility: visible !important;
+    z-index: 999999999 !important;
+}
+.prdctfltr_woocommerce_filter_submit{
+    color: #21BCD0 !important;
+    background-color: #E9E649 !important;
+    display: block !important;
+    width: 85%;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    margin: 0 auto !important;
+    border: 0;
+    padding: 8px 15px !important;
+    position: relative !important;
+    text-align: center !important;
+    border-radius: 20px !important;
+    text-transform: uppercase !important;
+}
+.prdctfltr_sale span::before{
+    background-image: url(/app/uploads/2018/08/icon-descuento.png) !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    content: '0';
+    font-size: 0 !important;
+    height: 30px !important;
+    left: -24% !important;
+    top: 0 !important;
+    visibility: visible !important;
+    width: 30px !important;
+    z-index: 999999999 !important;
+}
+.prdctfltr_overlay{
+    left: 0 !important;
+}
+.prdctfltr_wc .prdctfltr_title_selected{
+    background-color: #F4F4F4;
+    border: 2px solid #21BCD0;
+    margin-left: 2%;
+    padding: 1%;
+}
+.prdctfltr_topbar {
+    display: block;
+    margin-bottom: 4%;
+    margin-top: 4%;
+}
+.prdctfltr_topbar span::before{
+    display:none;
+}
+.prdctfltr_title_added{
+    color: #21BCD0 !important;
+}
+.prdctfltr_showing::before{
+    display: none;
+}
+
+span.prdctfltr_showing {
+    border-color: black;
+    border-left: solid;
+    padding-left: 14px;
+}
+.woocommerce-pagination{
+    padding-bottom: 5%;
+}
+.woocommerce-pagination span{
+display: none;
+}
+.prdctfltr-delete{
+    color: #21BCD0 !important;
+}
+.woocommerce .product-category {
+    display: none;
+}
+#titulo-producto{
+    color: #21BCD0 !important;
+}
+.boton-consultar-precio-detalle-producto{
+    color: white;
+    background-color: #21BCD0;
+    display: block;
+    width: 40%;
+    height: 31px !important;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 8px 15px;
+    position: relative;
+    text-align: center;
+    border-radius: 20px;
+    text-transform: uppercase;
+    top: 9px;
+}
+.prdctfltr_wc .prdctfltr_sale{
+    margin-top: 10%;
+    font-size: 13px;
+}
+.prdctfltr_wc span.prdctfltr_instock{
+    font-size: 13px;
+}
+.woocommerce div.product div.images .woocommerce-product-gallery__trigger{
+    z-index: 1;
 }
 /*FIN DE LA TIENDA-----------------------*/
 /*NOTICIAS-------------------------------*/
@@ -1822,9 +1963,44 @@ color: black;
 /*Inicio de responsive*/
 
 @media only screen and (max-width: 1280px) {
+    .contenido-ventajas {
+        margin-top: 5%;
+    }
+    .contenedor-title-nosotros {
+        width: 900px;
+        height: 900px;
+        transform: translate(0%, -29%);
+    }
+    .nosotros .contenedor-contenido-ventaja{
+        height: 200px;
+        width: 200px;
+    }
+    .nosotros .imgseccion {
+        padding-left: 5%;
+        padding-top: 20px;
+        
+    }
+    .nosotros .imgseccion img {
+        width: 100%;
+    }
+    .segundocolor {
+        width: 800px;
+        height: 800px;
+        transform: translateY(-22.5%);
+    }
+    .contenedor-hijo {
+        height: 400px;
+    }
+    .contenedor-categoria {
+        position: relative;
+        height: 585px;
+    }
     .boton-slider {
         width: 50%;
         font-size: 14px;
+    }
+    .boton-categoria-ir-tienda {
+        top: 114%;
     }
 
     .contenedor-parrafo {
@@ -1841,15 +2017,24 @@ color: black;
 
     .title-categoria {
         font-size: 16px !important;
+        font-weight: 100!important; 
     }
 
     .boton-categoria {
-        width: 60%;
+        width: 70%;
         font-size: 10px;
     }
-
+    .container-boton-categoria {
+        padding-top: 17%;
+    }
+    .cajita-contenido {
+         margin-top: 0;
+    }
+    .imgseccion {
+        height: 80px;
+    }
     .boton-ventaja a {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .contenedor-contenido {
@@ -1869,23 +2054,67 @@ color: black;
     }
 
     .contenedor-contenido-ventaja {
-        height: 39vh;
-        width: 39vh;
+        height: 220px;
+        width: 220px;
     }
     .sliderimagen, .circulo-blanco{
         transform: translate(-6%, -50%);  
     }
     .circulo-azul{
-        transform: translatey(-50%) translatex(-89px);
+        transform: translatey(-50%) translatex(-3%);
+    }
+    .contenamarillo {
+        height: 500px;
     }
     .contenido-ventajas {
         margin-top: -5%;
     }
-
+    .primercolor {
+        margin-top: 12%;
+    }
     .contenido-tercer-color {
-        padding-top: 35%;
+        padding-top: 27%;
         width: 70%;
         font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .boton-consultar-precio {
+        width: 85%;
+    
+    }
+    .verproductoshop {
+        left: 9%;
+        width: 85%;
+    }
+}
+@media only screen and (max-width: 1230px) {
+    .nosotros .imgseccion {
+        height: 81px;
+        padding-left: 11%;
+        width: 117px;
+    }
+    .nosotros .contenido-ventajas {
+        margin-top: 10%;
+    }
+    .comments .reply a{
+        font-size: 10px;
+        width: 190px;
+    }
+    .cada-ventaja-nosotros{
+        text-align: center;
+        padding-left: 2px;
+    }
+    .nosotros .contenedor-circulos {
+        padding: 4%;
+    }
+    .woocommerce-page ul.products li.product, .woocommerce ul.products li.product {
+        height: 430px !important;
+    }
+    .nosotros .contenedor-contenido-ventaja {
+        height: 25vh;
+        width: 25vh;
     }
 }
 
@@ -1962,18 +2191,18 @@ color: black;
     }
 
     .imgseccion {
+        width: 60px;
         height: 85px;
     }
 
     .contenido-ventajas {
+        margin-top: -24%;
         font-size: 9px;
     }
-
     .boton-enviar {
-        width: 65%;
-        font-size: 14px;
+        font-size: 10px;
+        width: 60%;
     }
-
 }
 @media only screen and (max-width: 1152px) {
     .nosotros .imgseccion {
@@ -1998,26 +2227,83 @@ color: black;
     }
 }
 
+@media only screen and (max-width: 1100px) {
+    .woocommerce-page ul.products li.product, .woocommerce ul.products li.product {
+        height: 410px;
+    }
+}
+
 
 @media only screen and (max-width: 1024px) {
+    .nosotros .contenedor-circulos {
+        margin-left: 0;
+        padding: 0;
+    }
+    .nosotros .imgseccion img {
+        width: 100%;
+        max-width: 95%;
+    }
+
+.modal-card {
+    top: 15%;
+}
+    .single-product-data .related {
+        margin-top: 490px;
+    }
+    #boton-ocultar .boton-menu {
+        margin-right: -40%;
+        margin-top: -22%;
+        width: 13%;
+    }
+    .primera_parte {
+        margin-top: 8%;
+    }
+    .contenedor-texto-parte-uno {
+        padding-left: 125px;
+    }
+    .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+        height: 380px !important;
+    }
+    .contenedor-categoria {
+        position: relative;
+        height: 640px;
+    }
+    .contenedor-hijo {
+        height: 511px;
+    }
+
+    .contenedor-contenido-ventaja {
+        height: 200px;
+         width: 200px;
+    }
+    .primercolor {
+        margin-top: 20%;
+    }
+    .contenedor-titulo-nosotros {
+        height: 300px !important;
+    }
     .imgseccion {
         height: 100px;
     }
     .contenedor-titulo-nosotros{
         height: 360px;
     }
-    .contenedor-title-nosotros{
-        width: 110vh;
-        height: 110vh;
+    .contenedor-title-nosotros {
+        width: 750px;
+        height: 750px;
         border: 70px solid rgba(33, 188, 208, 0.6);
     }
     .contenedor-title-nosotros h2 {
         font-size: 52px;
     }
+    .nosotros .contenedor-contenido-ventaja {
+        height: 200px;
+        width: 200px;
+    }
     .segundocolor{
-        transform: translateY(-23.5%);
-        width: 140vh;
-        height: 140vh;
+        transform: translateY(-20.5%);
+        width: 750px;
+        height: 750px;
     }
     .contenedor-contenido {
         margin-top: 16%;
@@ -2032,20 +2318,131 @@ color: black;
     .contenedor-tarjetas-padre{
         margin-top: 16.4%;
     }
-    .boton-categoria-ir-tienda{
-        top: 85%;
-    }
     .imgseccion{
         width:82px
     }
+    .circulo-azul{
+        transform: translatey(-50%) translatex(-8%);
+    }   
 
     .contenido-tercer-color {
         padding-top: 28%;
     }
 }
+@media only screen and (max-width: 1000px) {
+    .woocommerce-page ul.products li.product, .woocommerce ul.products li.product {
+        height: 380px;
+    }
+    .boton-consultar-precio {
+        font-size: 8px;
+        font-weight: 100; 
+        width: 95%;
+    }
+    .verproductoshop {
+        font-size: 8px!important;
+        font-weight: 100;
+        left: 5%;
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .post-template-default .page-header {
+        height: 330px;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .woocommerce-page ul.products li.product, .woocommerce ul.products li.product {
+        height: 338px !important;
+    }
+    
+}
 @media only screen and (max-width: 768px) {
-    .modal-card-body input, .modal-card-body textarea {
-        width: 415px !important;
+    .contenedor-parrafo-ventaja {
+        right: -12px;
+        position: relative;
+        margin: unset;
+    }
+    .cada-ventaja-nosotros {
+        padding-top: 4%;
+    }
+    .imgseccion img {
+        max-width: 90%;
+    }
+    .boton-consultar-precio-detalle-producto {
+        margin: 0 auto;
+    }
+    #boton-ocultar .boton-menu {
+        margin-right: -50%;
+        margin-top: -32%;
+        width: 17%;
+    }
+    .circulo-azul {
+        transform: translatey(-50%) translatex(-15%);
+    }
+    .containerpost {
+        width: 80%;
+    }
+    .nosotros .contenedor-circulos{
+        margin-left: 5%;
+    }
+    .primercolor {
+        margin-top: 10%;
+    }
+    .contenido-tercer-color {
+        padding-top: 25%;
+    }
+    .contenedor-hijo {
+        height: 420px;
+    }
+    .nosotros .imgseccion {
+        margin: 0 auto;
+    }
+    .nosotros .contenido-ventajas {
+        margin-left: -10%;
+    }
+    .nosotros .imgseccion img {
+        margin: 0 auto;
+        width: 84%!important;
+    }
+    .modal-card {
+        margin: 0 auto;
+    }
+    .woocommerce-page ul.products li.product, .woocommerce ul.products li.product {
+        height: 525px !important;
+    }
+    .boton-consultar-precio {
+        background-color: #21bcd0;
+        border-radius: 20px;
+        color: #fff;
+        display: block;
+        font-size: 10px;
+        font-weight: 700;
+        height: 31px!important;
+        margin: -5px auto 0;
+        padding: 8px 15px;
+        position: relative;
+        text-align: center;
+        text-transform: uppercase;
+        width: 68%;
+    }
+    .verproductoshop {
+        font-size: 10px!important;
+        font-weight: 700;
+        left: 18%;
+        width: 68%;
+        z-index: 8;
+    }
+    
+    .partedos {
+        flex-basis: auto;
+    }
+
+    .primercolor {
+        margin-top: 10%;
+    }
+    .boton-enviar {
+        width: 45%;
     }
     .otro-menu .menu-item {
         font-size: 16px !important;
@@ -2064,7 +2461,7 @@ color: black;
 
     .boton-categoria-ir-tienda a {
         width: 180px;
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .contenedor-primero {
@@ -2096,7 +2493,7 @@ color: black;
     .boton-menu{
         margin-right: -7%;
     }
-    #menu-item-97, #menu-item-133, #menu-item-72, #menu-item-132{
+    #menu-item-97, #menu-item-133, #menu-item-72, #menu-item-132, #menu-item-162, #menu-item-158, #menu-item-163{
         display: none !important;
     }
     .title-ventajas {
@@ -2121,9 +2518,10 @@ color: black;
     }
     
     .contenedor-title-nosotros{
-        width: 95vh;
-            height: 95vh;
-            border: 60px solid rgba(33, 188, 208, 0.6);
+        transform: translate(0%, -21%);
+        width: 550px;
+        height: 550px;
+        border: 60px solid rgba(33, 188, 208, 0.6);
         }
     .contenedor-titulo-nosotros {
         height: 320px;
@@ -2190,7 +2588,7 @@ color: black;
     }
     .contenedor-parrafo {
         margin-top: 0 !important;
-        top: 23%;
+        top: 31%;
     }
     .contenido-primero {
         font-size: 18px !important;
@@ -2205,9 +2603,9 @@ color: black;
         height: 390px;
     }
     .segundocolor {
-        transform: translateY(-20.5%);
-        width: 115vh;
-        height: 115vh;
+        transform: translateY(-18.5%);
+        width: 650px;
+        height: 650px;
         border: 60px solid #4CC7D6;
     }
     .contenido-tercer-color {
@@ -2249,9 +2647,11 @@ color: black;
         margin: 0 auto; 
         width: 30%;
     }
-
+    .primercolor {
+        margin-top: 12%;
+    }
     .paginas-footer {
-        margin: none;
+        margin: 0 auto;
         text-align: center;
         margin-bottom: 30px;
         margin-left: 0; 
@@ -2298,9 +2698,6 @@ color: black;
         width: 100%;
         margin-left: 0; 
         margin-top: 0; 
-    }
-    .shop .woocommerce {
-        margin-top: 25%;
     }
     .woocommerce-product-gallery__image{
         width: 100%
@@ -2432,12 +2829,101 @@ color: black;
         right: 14%;
     }
 }
+@media only screen and (max-width: 844px) {
+    .boton-categoria {
+        width: 80%;
+    }
+    .boton-menu {
+        margin-right: -15%;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .post .comment-respond {
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 12%;
+    }
+    .comments .comment-list {
+        margin-left: 5%;
+        width: 90%;
+    }
+    .post .comment-respond .comment-form-cookies-consent label {
+        margin-left: 8%;
+    }
+    .post .entry-content {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .page-template-empresas .contenedor-empresas-confian {
+        padding-bottom: 30%;
+        margin-top: 10%;
+    }
+    .segundo-menu .menu-menuprimario-container {
+        margin-top: 50px;
+    }
+    .boton-consultar-precio-detalle-producto {
+        width: 50%;
+        font-size: 10px;
+    }
+    .related .single-product-data .products ul li .price {
+        font-weight: 100 !important;
+
+    }
+    .circulo-azul {
+        transform: translatey(-50%) translatex(-16%);
+    }
+    .home .contenedor-parrafo-ventaja{
+        right: 0;
+    }
+    .contenedor-padre-img-nosotros {
+        margin-bottom: 20%;
+    }
+    .contenedor-parrafo-ventaja {
+        right: -5px;
+        position: relative;
+    }
+    .parte-ventajas {
+        text-align: justify;
+        padding-left: 70px;
+    }    
+    .nosotros .contenedor-contenido-ventaja {
+        height: 150px;
+        width: 150px;
+    }
+    .nosotros .imgseccion {
+        padding-left: 0% !important;
+    }
+    .nosotros .imgseccion {
+        width: 102px !important;
+    }
+    .nosotros .imgseccion img {
+        width: 70% !important;
+    }
+    .shop .price {
+        font-size: 12px !important;
+    }
+    .contenedor-hijo{
+        height: 450px;
+    }
+    .contenedor-contenido-ventaja {
+        height: 180px;
+        width: 180px;
+    }
+    .imgseccion {
+        height: 89px;
+    }
+    .contenido-ventajas {
+        font-size: 7px;
+    }
+}
 @media only screen and (max-width: 830px) {
+
+    .primercolor {
+        margin-top: 20%;
+    }
+
     .single-product-data .entry-title {
         right: 10%;
-    }
-    .shop .woocommerce {
-        margin-top: 18%;
     }
     .nav-primary {
         margin-right: 10%;
@@ -2449,7 +2935,8 @@ color: black;
         font-size: 15px;
     }
     .slider .caption {
-        margin-top: 20%;
+        margin-top: 24%;
+        left: -4%;
     }
     .boton-slider {
         font-size: 10px;
@@ -2459,6 +2946,7 @@ color: black;
         height: 420px;
     }
     .sliderimagen, .circulo-blanco {
+        transform: translate(-19%, -50%);
         width: 350px;
         height: 350px;
     }
@@ -2468,6 +2956,11 @@ color: black;
     }
     .slider-item-numeros a {
         font-size: 15px;
+    }
+}
+@media only screen and (max-width: 740px) {
+    .cada-ventaja-nosotros{
+        text-align: center;
     }
 }
 @media only screen and (max-width: 735px) {
@@ -2498,7 +2991,18 @@ color: black;
         font-size: 22px;
     }
 }
+@media only screen and (max-width: 710px) {
+    .woocommerce-page ul.products li.product, .woocommerce ul.products li.product {
+        height: 480px;
+    }
+}
 @media only screen and (max-width: 700px) {
+    .noticias .contenedor-noticias{
+        margin-left: 0;
+    }
+    .nosotros .contenedor-circulos{
+        margin-left: 11%;
+    }
     .containerpost:nth-of-type(2n+2) .img-container{
         width: 85%;
         height: 40%;
@@ -2524,20 +3028,16 @@ color: black;
         }
         
         .contenido {
-            margin-top: 26%;
+            margin-top: 30%;
             width: 90%;
-            
         }
-        
-
-        
     .primercolor {
         height: 329px;
     }
     .segundocolor {
-        width: 100vh;
-        height: 100vh;
-        border: 50px solid #4CC7D6;
+        width: 450px;
+        height: 450px;
+        border: 42px solid #4CC7D6;
     }
     .contenedor-contenido {
         margin-top: 3%;
@@ -2552,12 +3052,28 @@ color: black;
     }
 }
 @media only screen and (max-width: 680px) {
+    .boton-consultar-precio-detalle-producto {
+        width: 70%;
+    }
     .single-product-data .product-type-simple {
         margin-top: 35%;
     }
 
     .contenedor-primero {
         height: 380px !important;
+    }
+    .segundocolor {
+        transform: translateY(-12.5%);
+    }
+    .contenedor-hijo {
+        height: 245px;
+    }
+    .contenedor-parrafo {
+        margin-top: 0 !important;
+        top: 22%;
+    }
+    .contenido-tercer-color {
+        padding-top: 17%;
     }
 }
 
@@ -2589,7 +3105,19 @@ color: black;
     }
 }
 
-
+@media only screen and (max-width: 650px) {
+    .contenedor-title-nosotros {
+        transform: translateY(-20%);
+    }
+}
+@media only screen and (max-width: 640px) {
+    .sliderimagen, .circulo-blanco {
+        transform: translate(-24%, -50%);
+    }
+    .woocommerce-page ul.products li.product, .woocommerce ul.products li.product {
+        height: 465px !important;
+    }
+}
 @media only screen and (max-width: 635px) {
     .menu-menuprimario-container ul {
         display: none;
@@ -2603,15 +3131,25 @@ color: black;
         float: right;
     }
     .slideshow {
-        margin-top: 200px;
+        margin-top: 150px;
     }
 }
 @media only screen and (max-width: 622px) {
+    .shop .contenedor-titulo-categorias {
+        margin-top: 20%;
+    }
+    .caja-texto-suscribete {
+        height: 53%;
+    }
+    .contenedor-parrafo {
+        margin-top: 0 !important;
+        top: 23%;
+    }
     .segundocolor {
-        width: 85vh;
-        height: 80vh;
+        width: 500px;
+        height: 500px;
         border: 50px solid #4CC7D6;
-        transform: translateY(-14.5%); 
+        transform: translateY(-16.5%); 
     }
     .contenedor-contenido {
         margin-top: -7%;
@@ -2652,6 +3190,73 @@ color: black;
         width: 110px;
     }
 
+}
+@media only screen and (max-width: 600px) {
+    #boton-ocultar .boton-menu {
+        margin-right: -50%;
+        margin-top: -37%;
+        width: 22%;
+    }
+    .boton-menu {
+        margin-right: -4%;
+        margin-top: 6%;
+    }
+    .circulo-azul {
+        width: 390px;
+        height: 390px;
+        transform: translatey(-50%) translatex(-168px);
+    }
+    .sliderimagen, .circulo-blanco {
+        width: 300px;
+        height: 300px;
+        transform: translate(-50%, -50%);
+    }
+    .contenedor-img-circular {
+        width: 500px;
+        height: 500px;
+    }
+    .nosotros .contenido-ventajas {
+        margin-left: -34%;
+    }
+    .contenedor-padre-img-nosotros {
+        margin-bottom: 20%;
+    }
+    .contenido-tercer-color {
+        padding-top: 25%;
+    }
+    .contenedor-hijo {
+        height: 425px;
+    }
+    .post-template-default .page-header{
+        display: block
+    }
+    .woocommerce-page ul.products li.product, .woocommerce ul.products li.product {
+        height: 430px !important;
+    }
+    .modal-card {
+        left: 0%!important; 
+        width: 450px!important;
+    }
+}
+@media only screen and (max-width: 590px) {
+    .boton-menu {
+        margin-top: -22%;
+    }
+    .verproductoshop {
+        left: 7%;
+        width: 90%;
+    }
+    .boton-consultar-precio {
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 580px) {
+    .post-template-default .page-header {
+        height: 230px;
+    }
+    .contenedor-title-post-detalle h1 {
+        font-size: 20px;
+    }
 }
 @media only screen and (max-width: 570px) {
     .contendos {
@@ -2695,11 +3300,6 @@ color: black;
     .slider li {
         padding-top: 36%;
     }
-
-    .slider .caption {
-        margin-top: -30% !important;
-    }
-
 }
 @media only screen and (max-width: 530px) {
     .contenedorimg-confian {
@@ -2715,10 +3315,16 @@ color: black;
     .segundocolor {
         width: 80vh;
         height: 80vh;
-        transform: translateY(-18.5%);
+        transform: translateY(-15.5%);
     }
 }
 @media only screen and (max-width: 500px) {
+    .comments .reply a{
+        width: 130px;
+    }
+    .woocommerce-page ul.products li.product, .woocommerce ul.products li.product {
+        height: 384px !important;
+    }
     .otro-menu .menu-item {
         font-size: 12px !important;
         padding-right: 10px !important;
@@ -2743,8 +3349,8 @@ color: black;
          margin-top: 0; 
     }
     .segundocolor {
-        width: 70vh;
-        height: 70vh;
+        width: 450px;
+        height: 450px;
         transform: translateY(-16.5%);
     }
     .contenedor-contenido {
@@ -2761,21 +3367,23 @@ color: black;
     .slider li {
         padding-top: 40%;
     }
-
     .sliderimagen, .circulo-blanco {
-        transform: translate(-25%, -50%);
+        transform: translate(-51%, -50%);
     }
     .slider .caption h2 {
         font-size: 15px;
+        text-align: center;
+        justify-content: center;
+        margin: 0 auto;
     }
     .boton-slider {
-        font-size: 8px;
-        margin-top: 10%;
+        font-size: 12px;
+        margin-top: 12%;
     }
     .circulo-azul {
-        width: 280px;
-        height: 280px;
-        transform: translatey(-50%) translatex(-86px);
+        width: 320px;
+        height: 320px;
+        transform: translatey(-50%) translatex(-145px);
     }
     .slider-item-numeros {
         display: none;
@@ -2788,7 +3396,39 @@ color: black;
         right: 4px;
     }
 }
+@media only screen and (max-width: 480px) {
+    .nosotros .contenido-ventajas {
+        margin-left: -35%;
+        padding-bottom: 10%;
+    }
+    #boton-ocultar .boton-menu {
+        margin-right: -80%;
+        margin-top: -50%;
+        width: 30%;
+    }
+
+    .contenedor-img-circular {
+        width: 450px;
+        height: 450px;
+    }
+    .contenedor-padre-img-nosotros {
+        margin-bottom: 20%;
+    }
+    .contenedor-title-nosotros {
+        transform: translateY(-13%);
+        width: 460px;
+        height: 460px;
+        border: 40px solid rgba(33, 188, 208, 0.6);
+    }
+}
 @media only screen and (max-width: 460px) {
+    .contenedor-title-nosotros {
+        transform: translateY(-6%);
+        border: 38px solid rgba(33,188,208,.6);
+    }
+    .post-template-default .page-header{
+        margin-top: 22%!important;
+    }
     .contenedor-titulo-nosotros {
         height: 300px;
         }
@@ -2796,9 +3436,10 @@ color: black;
         font-size: 35px;
     }
     .contenedor-title-nosotros {
-        width: 75vh;
-        height: 75vh;
-        transform: translate(0%,-16%);
+            width: 380px;
+            height: 380px;
+            transform: translate(0%, -3%);
+        
     }
     .contenedor-texto-parte-uno {
         width: 80%;
@@ -2806,10 +3447,11 @@ color: black;
         margin: 0 auto;
     }
     .parte-ventajas {
-        padding-left: 12vh;
+        padding-left: 40px;
     }
     .tercera-parte-nosotros p {
         width: 80%;
+        font-size: 13px;
     }
 
     .slider li {
@@ -2822,40 +3464,113 @@ color: black;
     }
 
     .slideshow {
-        margin-top: 180px;
-        margin-bottom: -30% !important;
+        margin-top: 90px;
+        margin-bottom: -8% !important;
     }
 
     .circulo-azul {
-        width: 260px;
-        height: 260px;
-        transform: translatey(-50%) translatex(-120px);
+        width: 300px;
+        height: 300px;
+        transform: translatey(-50%) translatex(-175px);
+    }
+    .tituloslider{
+        padding-left: 15%;
+        margin: 0 auto;
+        text-align: center;
+        width: 100%;
+    }
+    .slideshow {
+        margin-left: 0;
     }
     .sliderimagen, .circulo-blanco {
-        transform: translate(-45%, -50%);
+        transform: translate(-67%, -50%);
+    }
+    .slider .caption {
+        transform: translatex(33%);
+        text-align: center;
+        justify-content: center;
+        margin-top: 25% !important;
+        width: 60%;
+        margin: 0 auto;
     }
 }
 
 @media only screen and (max-width: 440px) {
-
+    .verproductoshop {
+        font-size: 8px !important;
+        font-weight: 700;
+        }
+    .boton-consultar-precio {
+        font-size: 8px !important;
+        font-weight: 100;
+    }
     .slider li {
         padding-top: 100%;
     }
 
-    .slider .caption {
-        margin-top: -88% !important;
-        width: 60%;
-    }
 
     .segundocolor {
-        width: 65vh;
-        height: 65vh;
-
+        width: 370px;
+        height: 370px;
         transform: translateY(-13.5%);
         border: 36px solid #4CC7D6;
     }
+    .boton-enviar {
+        width: 65%;
+    }
+    
+    .boton-ventaja a {
+        font-size: 10px;
+        width: 250px;
+    }
 }
 @media only screen and (max-width: 420px) {
+    .nosotros .contenido-ventajas {
+        margin-left: -29%;
+        padding-bottom: 13%;
+        font-size: 8px;
+    }
+    .page-template-empresas .contenedor-empresas-confian {
+        padding-bottom: 35%;
+    }
+    .related  .onsale:after{
+        left: 35px !important;
+        top: 0 !important;
+    }
+    .onsale:after {
+        height: 50px !important;
+        left: 0px !important;
+        top: -1px !important;
+        width: 50px !important;
+    }
+    #boton-ocultar .boton-menu {
+        margin-right: -110%;
+        margin-top: -66%;
+        width: 40%;
+    }
+    .tituloslider {
+        margin-top: 15%;
+        padding-left: 6%;
+        
+    }
+    .circulo-azul {
+        transform: translatey(-50%) translatex(-165px);
+    }
+    .form-submit{
+        padding-bottom: 20%;
+    }
+    .contenedor-padre-img-nosotros {
+        margin-bottom: 14%;
+    }
+    .contenedor-img-circular {
+        width: 300px;
+        height: 300px;
+        border-radius: 313px;
+        border: 32px solid rgba(33, 188, 208, 0.6);
+    }
+    .contenedor-hijo {
+        height: 380px;
+    }
     .modal-card{
     width: 300px !important;
     } 
@@ -2867,8 +3582,143 @@ color: black;
         font-size: 10px !important;
         width: 260px !important;
     }
+    .contenedor-input {
+        padding-top: 10%;
+        padding: 24px;
+    }
+}
+@media only screen and (max-width: 412px) {
+    .contenedor-texto-parte-uno h2 {
+        font-size: 18px;
+    }
+    .tituloslider{
+        margin-top: 16%;
+        padding-left: 8%;
+    }
+
+    .page-template-empresas .contenedor-title-nosotros h2 {
+        font-size: 25px;
+    }
+    .page-template-empresas .contenedor-empresas-confian {
+        padding-bottom: 25%;
+    }
+    .contenedor-hijo {
+        height: 340px;
+    }
+    .shop .contenedor-titulo-categorias {
+        margin-top: 35%;
+    }
+    .woocommerce-page ul.products li.product, .woocommerce ul.products li.product {
+        height: 360px !important;
+    }
+
+}
+@media only screen and (max-width: 400px) {
+    .nosotros .contenido-ventajas {
+        font-size: 10px;
+        margin-left: -60%;
+    }
+    .nosotros .contenedor-circulos {
+        margin-left: 25%;
+    }
+    .page-template-empresas .contenedor-empresas-confian {
+        padding-bottom: 30%;
+    }
+    .post-template-default .page-header {
+        height: 212px;
+    }
+    .woocommerce-page ul.products li.product, .woocommerce ul.products li.product {
+        height: 345px !important;
+    }
+    .shop .contenedor-titulo-categorias {
+        margin-top: 40%;
+    }
+    .contenedor-padre-img-nosotros {
+        margin-bottom: 20%;
+    }
+    .contenedor-parrafo-ventaja {
+        position: relative;
+    }
+}
+@media only screen and (max-width: 384px) {
+    .nosotros .contenido-ventajas {
+        font-size: 10px;
+        margin-left: -40%;
+    }
+    #boton-ocultar .boton-menu {
+        margin-right: -137%;
+        margin-top: -80%;
+        width: 40%;
+    }
+}
+@media only screen and (max-width: 375px) {
+    .contenedor-img-circular {
+        width: 300px;
+        height: 300px;
+    }
+    .nosotros .contenido-ventajas {
+        font-size: 10px;
+        padding-bottom: 13%;
+        margin-left: -35%;
+    }
+    .woocommerce div.product div.images .woocommerce-product-gallery__trigger {
+        top: 20%;
+    }
+    .single-product-data .entry-title {
+        margin-top: 6%;
+    }
+    .onsale:after {
+        height: 55px !important;
+        left: -3px !important;
+        top: 12px !important;
+        width: 65px !important;
+    }
+    #boton-ocultar .boton-menu {
+        margin-right: -147%;
+        margin-top: -78%;
+        width: 45%;
+    }
+    .sliderimagen, .circulo-blanco {
+        transform: translate(-63%, -50%);
+    }
+    .post-template-default .page-header {
+        height: 190px;
+    }
+    .contenedor-hijo {
+        height: 340px;
+    }
+    .contenedor-title-nosotros {
+        width: 350px;
+        height: 350px;
+        transform: translate(0%, 2%);
+    }
 }
 @media only screen and (max-width: 365px) {
+    .onsale:after {
+        height: 46px !important;
+        width: 46px !important;
+    }
+    .contenedor-title-nosotros {
+        border: 23px solid rgba(33, 188, 208, 0.6);
+        height: 300px;
+        transform: translateY(8%);
+        width: 300px;
+    }
+    .contenedor-title-nosotros h2 {
+        font-size: 25px;
+    }
+    .post-template-default .page-header {
+        height: 160px;
+    }
+    .comments .reply a{
+        width: 100px;
+    }
+    .woocommerce-page ul.products li.product, .woocommerce ul.products li.product {
+        height: 500px !important;
+    }
+    .boton-consultar-precio,    .verproductoshop {
+        font-weight: 700;
+    }
     .boton-ventaja a {
         margin-bottom: 30%;
     }
@@ -2887,6 +3737,7 @@ color: black;
         font-size: 15px;
     }
     .boton-enviar {
+        width: 80% !important;
         font-size: 10px;
     }
     .contenedor-titulo-empresas-confian {
@@ -2903,11 +3754,9 @@ color: black;
         width: 95%;
     }
     .segundocolor {
-        width: 50vh;
-        height: 50vh;
-        -webkit-transform: translateY(-10.5%);
-        -o-transform: translateY(-10.5%);
-        transform: translateY(-7.0%);
+        width: 350px;
+        height: 350px;
+        transform: translateY(-11%);
         border: 20px solid #4CC7D6;
     }
     .imgmenu {
@@ -2925,13 +3774,12 @@ color: black;
     .slideshow {
         margin-bottom: 26%;
     }
-    .tituloslider {
-        left: -10px;
-    }
     .slider .caption {
         width: 40%;
-        left: -18%;
-        margin-top: -90% !important;
+        margin-left: 15%;
+        left: 13%;
+        margin-top: 39% !important;
+        
     }
     .slider li {
         padding-top: 90%;
@@ -2940,13 +3788,14 @@ color: black;
         font-size: 10px;
     }
     .circulo-azul {
-        width: 230px;
-        height: 230px;
+        width: 300px;
+        height: 300px;
+        transform: translatey(-50%) translatex(-151px);
     }
     .sliderimagen, .circulo-blanco {
-        width: 200px;
-        height: 200px;
-        transform: translate(-42%, -50%);
+        width: 220px;
+        height: 220px;
+        transform: translate(-57%, -50%);
     }
     .contenedorimg-confian {
         width: 80px;
@@ -2972,14 +3821,10 @@ color: black;
         max-width: 8%;
     }
     .tituloslider {
+        left: -20px;
         margin-top: -10%;
     }
-    .sliderimagen, .circulo-blanco {
-        transform: translate(-48%, -50%);
-    }
-    .circulo-azul {
-        transform: translatey(-50%) translatex(-111px);
-    }
+
     .contenido-primero {
         font-size: 14px;
     }
@@ -3002,6 +3847,89 @@ color: black;
         font-size: 10px;
         padding-top: 20%;
     }
+}
+
+@media only screen and (max-width: 360px) {
+    .modal-card {
+        top: 7%;
+    }
+    #tab-description {
+        top: 43% !important;
+    }
+    .related  .woocommerce-page ul.products li.product, .woocommerce ul.products li.product {
+        height: 349px !important;
+    }
+    .related .boton-consultar-precio {
+        width: 94%;
+        font-weight: 100;
+    }
+    .related .verproductoshop {
+        left: 5%;
+        width: 94%;
+    }
+    #boton-ocultar .boton-menu {
+        margin-right: -147%;
+        margin-top: -105%;
+        width: 45%;
+    }
+    .imgseccion img {
+        width: 100% !important;
+        max-width: 90%;
+    }
+    .tituloslider {
+        margin-top: 10%;
+        padding-left: 19%;
+    }
+    .nosotros .contenido-ventajas {
+        margin-left: -15px;
+    }
+    .contenedor-parrafo-ventaja {
+        right: 9px;
+        position: relative;
+    }
+    .modal-card-body .title-con-nosotros h2 {
+        font-size: 8px;
+    }
+    .contenedor-hijo {
+        height: 300px;
+    }
+}
+@media only screen and (max-width: 320px) {
+    #boton-ocultar .boton-menu {
+        margin-right: -208%;
+        margin-top: -129%;
+        width: 60%;
+    }
+    .tituloslider {
+        margin-top: 1%;
+    }
+    .slideshow {
+        margin-top: 130px;
+    }
+    .contenedor-img-circular {
+        width: 300px;
+        height: 300px;
+    }
+    .woocommerce-page ul.products li.product, .woocommerce ul.products li.product {
+        height: 470px !important;
+    }
+    .contenido-ventajas {
+        font-size: 7px;
+    }
+    .contenedor-hijo {
+        height: 290px;
+    }
+    .segundocolor {
+        transform: translateY(-7%);
+        width: 310px;
+        height: 310px;
+    }
+}
+@media only screen and (max-width: 270px) {
+    .woocommerce-page ul.products li.product, .woocommerce ul.products li.product {
+        height: 440px;
+    }
+
 }
 /*Fin de responsive*/
 
