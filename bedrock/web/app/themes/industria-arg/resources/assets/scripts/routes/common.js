@@ -4,11 +4,34 @@ export default {
  
       $("#boton-desplegar, #boton-ocultar").click(function(e) { 
         e.preventDefault();
-          $(".nav-primary").fadeToggle(),
-          $(".boton-cerrar").fadeToggle(),
+          $(".nav-primary").fadeToggle();
+          $(".boton-cerrar").fadeToggle();
           $(".segundo-menu").slideToggle();
       });
+      $(".menu-item-163 > a").click(function(){
+        $(".nav-primary").fadeIn();
+        $(".boton-cerrar").fadeOut();
+        $(".segundo-menu").slideUp();
+        $('html, body').animate({ scrollTop: ($("#footer-enviar").offset().top) -100 }, 1500); 
+      });
 
+    //boton cargar mas
+    $.getJSON( "http://de-industrias-arg.test/wp-json/wp/v2/posts?page=1", function( data ) {
+      var noticias = [];
+      $.each( data, function( id, title ) {
+        noticias.push( "<li id='" + id + "'>" + title + "</li>" );   
+
+      });  
+      console.log(data)
+      console.log(noticias);
+      
+        $( "<ul/>", {
+          "class": "my-new-list",
+          html: noticias.join(""),
+        }).appendTo( "#contenedor-de-noticias" );
+      });
+     
+  
     //llamada de modal mayorista
     $(".menu-item-162").click(function (e) { 
       e.preventDefault();
@@ -65,14 +88,17 @@ export default {
       $(document).ready(function(){
         var imgItems = $('.slider li').length; // Numero de Slides
         var imgPos = 1;
+        var i;
       
         // Agregando paginacion --
-  
+        for(i = 1; i <= imgItems; i++){
+          $('.pagination').append("<li><a href='#'>"+ i +"</a></li>");
+        } 
         //------------------------
       
         $('.slider li').hide(); // Ocultanos todos los slides
         $('.slider li:first').show(); // Mostramos el primer slide
-        $('.pagination li:first').css({'color': '#CD6E2E'}); // Damos estilos al primer item de la paginacion
+        $('.pagination li:first').css({'color': '#4CC7D6'}); // Damos estilos al primer item de la paginacion
       
         // Ejecutamos todas las funciones
         $('.pagination li').click(pagination);
@@ -82,7 +108,7 @@ export default {
       
         setInterval(function(){
           nextSlider();
-        }, 1000000);
+        }, 4000);
       
         // FUNCIONES =========================================================
       
@@ -94,37 +120,36 @@ export default {
       
           // Dandole estilos a la paginacion seleccionada
           $('.pagination li').css({'color': '#858585'});
-          $(this).css({'color': '#CD6E2E'});
+          $(this).css({'color': '#4CC7D6'});
       
           imgPos = paginationPos;
+      
         }
+      
         function nextSlider(){
           if( imgPos >= imgItems){imgPos = 1;} 
           else {imgPos++;}
       
           $('.pagination li').css({'color': '#858585'});
-          $('.pagination li:nth-child(' + imgPos +')').css({'color': '#CD6E2E'});
+          $('.pagination li:nth-child(' + imgPos +')').css({'color': '#4CC7D6'});
       
           $('.slider li').hide(); // Ocultamos todos los slides
-          $('.slider li').removeClass('active'); // Ocultamos la clase de todos los slides
           $('.slider li:nth-child('+ imgPos +')').fadeIn(); // Mostramos el Slide seleccionado
-          $('.slider li:nth-child('+ imgPos +')').addClass('active'); // Mostramos la clase en el item seleccionado
+      
         }
-      ////////////////////
+      
         function prevSlider(){
           if( imgPos <= 1){imgPos = imgItems;} 
           else {imgPos--;}
       
           $('.pagination li').css({'color': '#858585'});
-          $('.pagination li:nth-child(' + imgPos +')').css({'color': '#CD6E2E'});
+          $('.pagination li:nth-child(' + imgPos +')').css({'color': '#4CC7D6'});
       
           $('.slider li').hide(); // Ocultamos todos los slides
           $('.slider li:nth-child('+ imgPos +')').fadeIn(); // Mostramos el Slide seleccionado
         }
       });
-      $(".menu-item-163 > a").click(function(){
-        $("html, body").animate({ scrollTop: $(document).height()}, 1500);
-      });
+
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired

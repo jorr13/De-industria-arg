@@ -22,6 +22,18 @@ export default {
       $('#electrodomestico, #construccion, #contenedor-tarjetas-padre').fadeOut();
       $('.contenedor-tarjetas-padre').fadeToggle();        
     });
+
+    //dinamisando categorias :)
+//recibimos el evento del boton con las variables
+$(".verproducto-categori").click(function (e) {
+  e.preventDefault();
+  var categoria =  $(this).siblings(".contenedor-prueba").children(".tituloquefrao").text();
+  $.post("http://de-industrias-arg.test/app/themes/industria-arg/app/productos-home.php", {
+    categoria1: categoria,
+  }, function (data) {
+    $("#returnmessage").append(data); // Append returned message to message paragraph.
+  });
+});
     },
 
   finalize() {

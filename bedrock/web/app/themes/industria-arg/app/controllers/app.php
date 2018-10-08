@@ -105,6 +105,8 @@ function postsLoop()
 {
     $posts = get_posts([
         'post_type' => 'post',
+        'numberposts' => -1,
+        'order' => 'DESC', 'include' => array(),
     ]);
 
     return array_map(function ($post) {
@@ -119,6 +121,7 @@ function postsLoop()
         ];
     }, $posts);
 }
+//paginacion
 
 
 }

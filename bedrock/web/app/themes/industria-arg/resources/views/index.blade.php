@@ -31,11 +31,8 @@
       <div class="right">
         <span class="fa fa-chevron-right"><img src="/app/uploads/2018/08/flecha-subir.png" alt=""></span>
       </div>
-      <div class="slider-item-numeros">
-      <a href="">01</a>
-      <a href="">02</a>
-      <a href="">03</a>
-      <a href="">04</a>
+      <div class="slider-item-numeros pagination">
+ 
       </div>
       <div class="left">
         <span class="fa fa-chevron-left"><img src="/app/uploads/2018/08/flecha-bajar.png" alt=""></span>
@@ -150,7 +147,7 @@
 <!--electrodomestico-->
 
 <!--construccion-->
-<div class="producto-contenedor-padre columns is-multiline is-12" id="construccion" style="display:none" >
+<!--<div class="producto-contenedor-padre columns is-multiline is-12" id="construccion" style="display:none" >
     <div class="contenedor-tarjetas-producto" >
         <div class="header-categoria-producto">
             <span class="titulo-categoria-producto">Construccion</span>
@@ -175,12 +172,13 @@
           </div>
           @endforeach
   </div>
-  </div>
+  </div>-->
   <!--construccion-->
   <div class="boton-categoria-ir-tienda">
       <a href="/shop/">Ver Tienda</a>
     </div>
 </div>
+
 
 
 <!--fin de categorias-->

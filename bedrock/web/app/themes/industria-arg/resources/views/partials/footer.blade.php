@@ -72,7 +72,7 @@
 
       </div>
     </div>
-    <div class="partedos column is-6">
+    <div class="partedos column is-6" id="footer-enviar">
       <div class="contenedorformulario">
         <div class="title-con-nosotros">
           <h2>pongase en contacto con nosotros</h2>

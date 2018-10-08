@@ -18,15 +18,14 @@
         @endwhile 
     @else      
     @endif
-
-<div class="contenedor-noticias columns is-multiline is-12">
-    @foreach(array_slice($posts_loop,0,8) as $posts)
+<div id="contenedor-de-noticias" class="contenedor-noticias columns is-multiline is-12">
+    {{-- @foreach(array_slice($posts_loop,0,4) as $posts)
     <div class="containerpost column is-9">
       <div class="img-container">
       <!--Esto es el thumb-->
       {!! $posts['thumbnail'] !!}
       </div>
-      <a href=" {!! $posts['link'] !!}" class="link posts-link">
+      <div class="posts-link">
       <div class="contenido">
         <h4 class="titleposts posts-title">
         <!--Esto es el titulo-->
@@ -34,11 +33,15 @@
         <p class="excerpt posts-excerpt">
         <!--esto es el excerpt-->
         {!! $posts['excerpt'] !!}</p>
+        <a href="{!! $posts['link'] !!}" class="leer-mas">leer mas</a>
       </div>
-      </a>
+    </div>
     </div>   
-    @endforeach
-    {!! get_the_posts_navigation() !!}
+    @endforeach --}}
+    <a href="" class="">Mostrar mas</a>
 </div>
+
+
+
 
 @endsection
